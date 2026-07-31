@@ -136,13 +136,18 @@
   </div>
 
   <header class="site-header d-print-none">
-    <div class="container text-center text-lg-start">
-      <div class="clearfix">
-        <h1 class="site-title mb-0"><span class="window-dots"><span></span><span></span><span></span></span><span
-            class="site-title-text">bardia@resume:~</span></h1>
-        <div class="site-nav">
+    <div class="container">
+      <div class="nav-bar">
+        <a class="site-title mb-0" href="#top"><span
+            class="window-dots"><span></span><span></span><span></span></span><span
+            class="site-title-text">bardia@resume:~</span></a>
+        <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="site-nav collapse" id="siteNav">
           <nav role="navigation">
-            <ul class="nav justify-content-center align-items-center">
+            <ul class="nav">
               <li class="nav-item"><a class="nav-link" href="#about" title="About"><span
                     class="menu-title">about</span></a></li>
               <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span
@@ -174,39 +179,38 @@
     </div>
   </header>
 
+
   <div class="page-content">
     <div class="container">
       <div class="resume-container">
-
         <div class="panel my-5" id="intro">
           <div class="cover bg-image"><img src="images/header-background.jpg" alt="">
             <div class="mask">
-              <div class="text-center p-5">
-                <div class="avatar p-1"><img class="img-thumbnail shadow-2-strong" src="images/20250802_180004.jpg"
-                    width="160" height="160" alt="Bardia Nikbakhsh" /></div>
-                <div class="header-bio mt-3">
+              <div class="hero-inner">
+                <div class="avatar-frame" data-aos="zoom-in" data-aos-delay="0">
+                  <img src="images/20250802_180004.jpg" alt="Bardia Nikbakhsh" />
+                </div>
+                <div class="header-bio">
                   <div data-aos="zoom-in" data-aos-delay="0">
                     <h2 class="h1">Bardia Nikbakhsh</h2>
                     <p class="role-line">$ whoami &nbsp;→&nbsp; Software Engineer</p>
                   </div>
-                  <div class="header-social mb-3 d-print-none" data-aos="zoom-in" data-aos-delay="200">
-                    <nav role="navigation">
-                      <ul class="nav justify-content-center">
-                        <li class="nav-item"><a class="nav-link" href="#" title="Twitter"><i
-                              class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" title="Facebook"><i
-                              class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#" title="Instagram"><i
-                              class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://github.com/bardianz" title="Github"><i
-                              class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
-                      </ul>
-                    </nav>
+                  <div class="header-social d-print-none" data-aos="zoom-in" data-aos-delay="200">
+                    <ul class="nav">
+                      <li class="nav-item"><a class="nav-link" href="#" title="Twitter"><i
+                            class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" title="Facebook"><i
+                            class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
+                      <li class="nav-item"><a class="nav-link" href="#" title="Instagram"><i
+                            class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
+                      <li class="nav-item"><a class="nav-link" href="https://github.com/bardianz" title="Github"><i
+                            class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
+                    </ul>
                   </div>
-                  <div class="d-print-none">
-                    <a class="btn btn-outline-light btn-lg shadow-sm mt-1 me-3" href="#" data-aos="fade-right"
+                  <div class="hero-cta d-print-none">
+                    <a class="btn btn-outline-light shadow-sm" href="#" data-aos="fade-right"
                       data-aos-delay="700">./download_cv</a>
-                    <a class="btn btn-info btn-lg shadow-sm mt-1" href="#contact" data-aos="fade-left"
+                    <a class="btn btn-info shadow-sm" href="#contact" data-aos="fade-left"
                       data-aos-delay="700">./contact</a>
                   </div>
                 </div>
@@ -281,7 +285,7 @@
               <div class="skill-chip"><i class="fas fa-database"></i>PostgreSQL, MySQL</div>
               <div class="skill-chip"><i class="fab fa-docker"></i>Docker</div>
               <div class="skill-chip"><i class="fas fa-cubes"></i>MongoDB, Redis</div>
-              <div class="skill-chip"><i class="fas fa-mobile-screen-button"></i>Flutter</div>
+              <div class="skill-chip"><i class="fas fa-mobile-alt"></i>Flutter</div>
             </div>
           </div>
         </div>

@@ -2,646 +2,729 @@
 <html lang="en-US">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bardia Nikbakhsh — Software Engineer</title>
-  <meta name="description"
-    content="Bardia Nikbakhsh — Software Engineer specializing in Python, Django and Machine Learning.">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-    media="print" onload="this.media='all'" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" />
-  </noscript>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bardia Nikbakhsh — Software Engineer</title>
+<meta name="description"
+content="Bardia Nikbakhsh — Software Engineer specializing in Python, Django and Machine Learning.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+<link rel="preload" as="style"
+href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap" />
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap"
+media="print" onload="this.media='all'" />
+<noscript>
+<link rel="stylesheet"
+href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap" />
+</noscript>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+<link href="css/font-awesome/css/all.min.css?ver=2.0.0" rel="stylesheet">
+<link href="css/aos.css?ver=2.0.0" rel="stylesheet">
+<link href="css/main.css?ver=2.0.0" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<noscript>
+<style type="text/css">
+[data-aos] {
+opacity: 1 !important;
+transform: translate(0) scale(1) !important;
+}
+</style>
+</noscript>
 
-  <link href="css/font-awesome/css/all.min.css?ver=2.0.0" rel="stylesheet">
-  <link href="css/aos.css?ver=2.0.0" rel="stylesheet">
-  <link href="css/main.css?ver=2.0.0" rel="stylesheet">
-  <link rel="icon" href="favicon.ico">
+<!-- ===================== Added: navbar fix + language toggle + RTL support ===================== -->
+<style>
+/* Fix: on desktop the collapsible nav must actually be shown.
+   Bootstrap's .collapse hides content by default; if main.css hides the
+   hamburger on desktop without forcing .site-nav open, nothing shows. */
+@media (min-width: 992px) {
+  .site-header .site-nav.collapse {
+    display: block !important;
+    height: auto !important;
+    visibility: visible !important;
+  }
+  .site-header .site-nav .nav {
+    display: flex !important;
+  }
+}
 
-  <noscript>
-    <style type="text/css">
-      [data-aos] {
-        opacity: 1 !important;
-        transform: translate(0) scale(1) !important;
-      }
-    </style>
-  </noscript>
+/* Language toggle button */
+.lang-toggle {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .35);
+  color: inherit;
+  border-radius: 6px;
+  padding: .3rem .7rem;
+  font-size: .8rem;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: .05em;
+  cursor: pointer;
+  line-height: 1;
+}
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+/* RTL / Persian support */
+html[dir="rtl"] body {
+  font-family: 'Vazirmatn', 'IBM Plex Sans', Arial, sans-serif;
+}
+html[dir="rtl"] .project-link::after,
+html[dir="rtl"] .status-line {
+  direction: rtl;
+}
+</style>
 </head>
-
-
 
 <body id="top">
 
-  <!-- ===================== Accounting App Modals ===================== -->
+<!-- ===================== Accounting App Modals ===================== -->
+<div class="modal fade" id="accountingSlide1Modal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img class="d-block w-100" src="images/accounting-app-1.png" alt="Accounting App - Slide 1">
+</div>
+</div>
+</div>
+</div>
 
-  <div class="modal fade" id="accountingSlide1Modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="d-block w-100" src="images/accounting-app-1.png" alt="Accounting App - Slide 1">
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="modal fade" id="accountingSlide2Modal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img class="d-block w-100" src="images/accounting-app-2.png" alt="Accounting App - Slide 2">
+</div>
+</div>
+</div>
+</div>
 
-  <div class="modal fade" id="accountingSlide2Modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="d-block w-100" src="images/accounting-app-2.png" alt="Accounting App - Slide 2">
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="modal fade" id="accountingSlide3Modal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img class="d-block w-100" src="images/accounting-app-3.png" alt="Accounting App - Slide 3">
+</div>
+</div>
+</div>
+</div>
 
-  <div class="modal fade" id="accountingSlide3Modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="d-block w-100" src="images/accounting-app-3.png" alt="Accounting App - Slide 3">
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- ===================== Library Management Modals ===================== -->
+<div class="modal fade" id="slide1Modal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img class="d-block w-100" src="images/LibraryManagement1.png" alt="Library Management - Slide 1">
+</div>
+</div>
+</div>
+</div>
 
-  <!-- ===================== Library Management Modals ===================== -->
+<div class="modal fade" id="slide2Modal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img class="d-block w-100" src="images/LibraryManagement2.png" alt="Library Management - Slide 2">
+</div>
+</div>
+</div>
+</div>
 
-  <div class="modal fade" id="slide1Modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="d-block w-100" src="images/LibraryManagement1.png" alt="Library Management - Slide 1">
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="modal fade" id="slide3Modal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img class="d-block w-100" src="images/LibraryManagement3.png" alt="Library Management - Slide 3">
+</div>
+</div>
+</div>
+</div>
 
-  <div class="modal fade" id="slide2Modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="d-block w-100" src="images/LibraryManagement2.png" alt="Library Management - Slide 2">
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="modal fade" id="slide4Modal" tabindex="-1" aria-hidden="true">
+<div class="modal-dialog modal-xl">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+<img class="d-block w-100" src="images/LibraryManagement4.png" alt="Library Management - Slide 4">
+</div>
+</div>
+</div>
+</div>
 
-  <div class="modal fade" id="slide3Modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="d-block w-100" src="images/LibraryManagement3.png" alt="Library Management - Slide 3">
-        </div>
-      </div>
-    </div>
-  </div>
+<header class="site-header d-print-none">
+<div class="container">
+<div class="nav-bar">
+<a class="site-title mb-0" href="#top"><span
+class="window-dots"><span></span><span></span><span></span></span><span
+class="site-title-text">bardia@resume:~</span></a>
 
-  <div class="modal fade" id="slide4Modal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <img class="d-block w-100" src="images/LibraryManagement4.png" alt="Library Management - Slide 4">
-        </div>
-      </div>
-    </div>
-  </div>
+<button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">FA</button>
 
-  <header class="site-header d-print-none">
-    <div class="container">
-      <div class="nav-bar">
-        <a class="site-title mb-0" href="#top"><span
-            class="window-dots"><span></span><span></span><span></span></span><span
-            class="site-title-text">bardia@resume:~</span></a>
-        <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="site-nav collapse" id="siteNav">
-          <nav role="navigation">
-            <ul class="nav">
-              <li class="nav-item"><a class="nav-link" href="#about" title="About"><span
-                    class="menu-title">about</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span
-                    class="menu-title">skills</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#experience" title="Experience"><span
-                    class="menu-title">experience</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span
-                    class="menu-title">education</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span
-                    class="menu-title">portfolio</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#certificates" title="Certificates"><span
-                    class="menu-title">certificates</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span
-                    class="menu-title">contact</span></a></li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">services</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" target="_blank" href="https://dnschanger.pythonanywhere.com">DNS
-                      Changer</a></li>
-                  <li><a class="dropdown-item" target="_blank" href="https://ntrweb.pythonanywhere.com/">Note Keeper</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
+<button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
+aria-expanded="false" aria-label="Toggle navigation">
+<i class="fas fa-bars"></i>
+</button>
+<div class="site-nav collapse" id="siteNav">
+<nav role="navigation">
+<ul class="nav">
+<li class="nav-item"><a class="nav-link" href="#about" title="About"><span
+class="menu-title" data-fa="درباره">about</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span
+class="menu-title" data-fa="مهارت‌ها">skills</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#experience" title="Experience"><span
+class="menu-title" data-fa="سوابق کاری">experience</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#education" title="Education"><span
+class="menu-title" data-fa="تحصیلات">education</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span
+class="menu-title" data-fa="نمونه‌کارها">portfolio</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#certificates" title="Certificates"><span
+class="menu-title" data-fa="گواهینامه‌ها">certificates</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span
+class="menu-title" data-fa="تماس">contact</span></a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+aria-expanded="false" data-fa="خدمات">services</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" target="_blank" href="https://dnschanger.pythonanywhere.com"
+data-fa="تغییردهنده DNS">DNS
+Changer</a></li>
+<li><a class="dropdown-item" target="_blank" href="https://ntrweb.pythonanywhere.com/" data-fa="یادداشت‌یار">Note Keeper</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
 
+<div class="page-content">
+<div class="container">
+<div class="resume-container">
+<div class="panel my-5" id="intro">
+<div class="cover bg-image"><img src="images/header-background.jpg" alt="">
+<div class="mask">
+<div class="hero-inner">
+<div class="avatar-frame" data-aos="zoom-in" data-aos-delay="0">
+<img src="images/20250802_180004.jpg" alt="Bardia Nikbakhsh" />
+</div>
+<div class="header-bio">
+<div data-aos="zoom-in" data-aos-delay="0">
+<h2 class="h1">Bardia Nikbakhsh</h2>
+<p class="role-line" data-fa="$ whoami &nbsp;→&nbsp; مهندس نرم‌افزار">$ whoami &nbsp;→&nbsp; Software Engineer</p>
+</div>
+<div class="header-social d-print-none" data-aos="zoom-in" data-aos-delay="200">
+<ul class="nav">
+<li class="nav-item"><a class="nav-link" href="#" title="Twitter"><i
+class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#" title="Facebook"><i
+class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#" title="Instagram"><i
+class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
+<li class="nav-item"><a class="nav-link" href="https://github.com/bardianz" title="Github"><i
+class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
+</ul>
+</div>
+<div class="hero-cta d-print-none">
+<a class="btn btn-outline-light shadow-sm" href="#" data-aos="fade-right"
+data-aos-delay="700" data-fa="./دانلود_رزومه">./download_cv</a>
+<a class="btn btn-info shadow-sm" href="#contact" data-aos="fade-left"
+data-aos-delay="700" data-fa="./تماس">./contact</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-  <div class="page-content">
-    <div class="container">
-      <div class="resume-container">
-        <div class="panel my-5" id="intro">
-          <div class="cover bg-image"><img src="images/header-background.jpg" alt="">
-            <div class="mask">
-              <div class="hero-inner">
-                <div class="avatar-frame" data-aos="zoom-in" data-aos-delay="0">
-                  <img src="images/20250802_180004.jpg" alt="Bardia Nikbakhsh" />
-                </div>
-                <div class="header-bio">
-                  <div data-aos="zoom-in" data-aos-delay="0">
-                    <h2 class="h1">Bardia Nikbakhsh</h2>
-                    <p class="role-line">$ whoami &nbsp;→&nbsp; Software Engineer</p>
-                  </div>
-                  <div class="header-social d-print-none" data-aos="zoom-in" data-aos-delay="200">
-                    <ul class="nav">
-                      <li class="nav-item"><a class="nav-link" href="#" title="Twitter"><i
-                            class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
-                      <li class="nav-item"><a class="nav-link" href="#" title="Facebook"><i
-                            class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
-                      <li class="nav-item"><a class="nav-link" href="#" title="Instagram"><i
-                            class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-                      <li class="nav-item"><a class="nav-link" href="https://github.com/bardianz" title="Github"><i
-                            class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
-                    </ul>
-                  </div>
-                  <div class="hero-cta d-print-none">
-                    <a class="btn btn-outline-light shadow-sm" href="#" data-aos="fade-right"
-                      data-aos-delay="700">./download_cv</a>
-                    <a class="btn btn-info shadow-sm" href="#contact" data-aos="fade-left"
-                      data-aos-delay="700">./contact</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="panel my-5" id="about">
+<div class="about-section">
+<div class="section-head">
+<span class="eyebrow" data-fa="/درباره">/about</span>
+<h2 class="section-title" data-fa="درباره من">About Me</h2>
+</div>
+<div class="row">
+<div class="col-md-6">
+<p data-fa="سلام، من بردیا نیک‌بخش هستم؛ یک توسعه‌دهنده وب با تخصص در جنگو و پایتون. علاوه بر مهارت‌های توسعه وب، در ساخت رابط‌های کاربری گرافیکی (GUI) با فریم‌ورک‌های پایتون مانند PyQt، Tkinter و Kivy نیز تجربه دارم.">Hi, I'm Bardia Nikbakhsh, and I'm a web developer with expertise in Django, Python. In addition to my
 
-        <div class="panel my-5" id="about">
-          <div class="about-section">
-            <div class="section-head">
-              <span class="eyebrow">/about</span>
-              <h2 class="section-title">About Me</h2>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <p>Hi, I'm Bardia Nikbakhsh, and I'm a web developer with expertise in Django, Python. In addition to my
-                  web development skills, I have experience creating Graphical User Interfaces (GUIs) using Python
-                  frameworks such as PyQT, Tkinter, and Kivy.
-                </p>
-                <p>Specifically, I have worked on developing and implementing machine learning models using Python
-                  libraries such as TensorFlow, Keras, and Scikit-learn. I am familiar with various machine learning
-                  techniques such as supervised and unsupervised learning, and deep learning.
-                </p>
-                <p>Additionally, I am familiar with Linux operating system and have experience working with Linux
-                  command line interface (CLI) and shell scripting.</p>
-                <p>I'm a quick learner and enjoy collaborating with others to solve complex problems and deliver
-                  innovative solutions.</p>
-              </div>
-              <div class="col-md-5 offset-md-1">
-                <h3 class="h5 fw-semibold mb-3">Bio</h3>
-                <div class="bio-list">
-                  <div class="bio-row">
-                    <div class="bio-label"><i class="far fa-calendar-alt"></i> born</div>
-                    <div class="bio-value">2001</div>
-                  </div>
-                  <div class="bio-row">
-                    <div class="bio-label"><i class="far fa-envelope"></i> email</div>
-                    <div class="bio-value">Bardia.Nikbakhsh@gmail.com</div>
-                  </div>
-                  <div class="bio-row">
-                    <div class="bio-label"><i class="fab fa-skype"></i> skype</div>
-                    <div class="bio-value">-</div>
-                  </div>
-                  <div class="bio-row">
-                    <div class="bio-label"><i class="fas fa-phone"></i> phone</div>
-                    <div class="bio-value">+989382701160</div>
-                  </div>
-                  <div class="bio-row">
-                    <div class="bio-label"><i class="fas fa-map-marker-alt"></i> address</div>
-                    <div class="bio-value">Mazandaran, Iran</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+web development skills, I have experience creating Graphical User Interfaces (GUIs) using Python
+frameworks such as PyQT, Tkinter, and Kivy.
+</p>
+<p data-fa="به‌طور خاص، در زمینه توسعه و پیاده‌سازی مدل‌های یادگیری ماشین با استفاده از کتابخانه‌هایی مانند TensorFlow، Keras و Scikit-learn فعالیت داشته‌ام. با تکنیک‌های مختلف یادگیری ماشین از جمله یادگیری نظارت‌شده، بدون نظارت و یادگیری عمیق آشنا هستم.">Specifically, I have worked on developing and implementing machine learning models using Python
 
-        <div class="panel my-5" id="skills">
-          <div class="skills-section">
-            <div class="section-head">
-              <span class="eyebrow">/skills</span>
-              <h2 class="section-title">Professional Skills</h2>
-            </div>
-            <div class="skills-grid">
-              <div class="skill-chip"><i class="fab fa-python"></i>Python</div>
-              <div class="skill-chip"><i class="fas fa-layer-group"></i>Django</div>
-              <div class="skill-chip"><i class="fab fa-linux"></i>Linux OS</div>
-              <div class="skill-chip"><i class="fas fa-brain"></i>Machine Learning</div>
-              <div class="skill-chip"><i class="fas fa-bolt"></i>Celery</div>
-              <div class="skill-chip"><i class="fab fa-git-alt"></i>Git</div>
-              <div class="skill-chip"><i class="fas fa-database"></i>PostgreSQL, MySQL</div>
-              <div class="skill-chip"><i class="fab fa-docker"></i>Docker</div>
-              <div class="skill-chip"><i class="fas fa-cubes"></i>MongoDB, Redis</div>
-              <div class="skill-chip"><i class="fas fa-mobile-alt"></i>Flutter</div>
-            </div>
-          </div>
-        </div>
+libraries such as TensorFlow, Keras, and Scikit-learn. I am familiar with various machine learning
+techniques such as supervised and unsupervised learning, and deep learning.
+</p>
+<p data-fa="همچنین با سیستم‌عامل لینوکس آشنا هستم و با خط فرمان (CLI) و شل‌اسکریپت‌نویسی در لینوکس کار کرده‌ام.">Additionally, I am familiar with Linux operating system and have experience working with Linux
 
-        <div class="panel my-5" id="experience">
-          <div class="work-experience-section">
-            <div class="section-head">
-              <span class="eyebrow">/experience</span>
-              <h2 class="section-title">Work Experience</h2>
-            </div>
-            <div class="timeline">
-              <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
-                <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Python, Django Intern <span class="text-muted h6">at Sepehrar System</span></div>
-                </div>
-                <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">September, 2023 - Present</div>
-                  <div>Some projects including designing and implementing database schemas using Django ORM,
-                    troubleshooting issues and bugs and etc.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+command line interface (CLI) and shell scripting.</p>
+<p data-fa="به سرعت یاد می‌گیرم و از همکاری با دیگران برای حل مسائل پیچیده و ارائه راهکارهای نوآورانه لذت می‌برم.">I'm a quick learner and enjoy collaborating with others to solve complex problems and deliver
 
-        <div class="panel my-5" id="education">
-          <div class="education-section">
-            <div class="section-head">
-              <span class="eyebrow">/education</span>
-              <h2 class="section-title">Education</h2>
-            </div>
-            <div class="timeline">
-              <div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="200">
-                <div class="timeline-head px-4 pt-3">
-                  <div class="h5">Bachelor of Computer Science <span class="text-muted h6">from MUST</span></div>
-                </div>
-                <div class="timeline-body px-4 pb-4">
-                  <div class="text-muted text-small mb-3">2020 - Present</div>
-                  <div>I studied Computer Engineering at Mazandaran University of Science and Technology (MUST).</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+innovative solutions.</p>
+</div>
+<div class="col-md-5 offset-md-1">
+<h3 class="h5 fw-semibold mb-3" data-fa="بیوگرافی">Bio</h3>
+<div class="bio-list">
+<div class="bio-row">
+<div class="bio-label" data-fa='<i class="far fa-calendar-alt"></i> تولد'><i class="far fa-calendar-alt"></i> born</div>
+<div class="bio-value">2001</div>
+</div>
+<div class="bio-row">
+<div class="bio-label" data-fa='<i class="far fa-envelope"></i> ایمیل'><i class="far fa-envelope"></i> email</div>
+<div class="bio-value">Bardia.Nikbakhsh@gmail.com</div>
+</div>
+<div class="bio-row">
+<div class="bio-label" data-fa='<i class="fab fa-skype"></i> اسکایپ'><i class="fab fa-skype"></i> skype</div>
+<div class="bio-value">-</div>
+</div>
+<div class="bio-row">
+<div class="bio-label" data-fa='<i class="fas fa-phone"></i> تلفن'><i class="fas fa-phone"></i> phone</div>
+<div class="bio-value">+989382701160</div>
+</div>
+<div class="bio-row">
+<div class="bio-label" data-fa='<i class="fas fa-map-marker-alt"></i> آدرس'><i class="fas fa-map-marker-alt"></i> address</div>
+<div class="bio-value" data-fa="مازندران، ایران">Mazandaran, Iran</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-        <div class="panel my-5 d-print-none" id="portfolio">
-          <div class="section-head">
-            <span class="eyebrow">/portfolio</span>
-            <h2 class="section-title">Portfolio</h2>
-          </div>
-          <div id="portfolio-section">
+<div class="panel my-5" id="skills">
+<div class="skills-section">
+<div class="section-head">
+<span class="eyebrow" data-fa="/مهارت‌ها">/skills</span>
+<h2 class="section-title" data-fa="مهارت‌های حرفه‌ای">Professional Skills</h2>
+</div>
+<div class="skills-grid">
+<div class="skill-chip"><i class="fab fa-python"></i>Python</div>
+<div class="skill-chip"><i class="fas fa-layer-group"></i>Django</div>
+<div class="skill-chip"><i class="fab fa-linux"></i><span data-fa="سیستم‌عامل لینوکس">Linux OS</span></div>
+<div class="skill-chip"><i class="fas fa-brain"></i><span data-fa="یادگیری ماشین">Machine Learning</span></div>
+<div class="skill-chip"><i class="fas fa-bolt"></i>Celery</div>
+<div class="skill-chip"><i class="fab fa-git-alt"></i>Git</div>
+<div class="skill-chip"><i class="fas fa-database"></i>PostgreSQL, MySQL</div>
+<div class="skill-chip"><i class="fab fa-docker"></i>Docker</div>
+<div class="skill-chip"><i class="fas fa-cubes"></i>MongoDB, Redis</div>
+<div class="skill-chip"><i class="fas fa-mobile-alt"></i>Flutter</div>
+</div>
+</div>
+</div>
 
+<div class="panel my-5" id="experience">
+<div class="work-experience-section">
+<div class="section-head">
+<span class="eyebrow" data-fa="/سوابق کاری">/experience</span>
+<h2 class="section-title" data-fa="سوابق کاری">Work Experience</h2>
+</div>
+<div class="timeline">
+<div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
+<div class="timeline-head px-4 pt-3">
+<div class="h5" data-fa='کارآموز پایتون، جنگو <span class="text-muted h6">در شرکت سپهرار سیستم</span>'>Python, Django Intern <span class="text-muted h6">at Sepehrar System</span></div>
+</div>
+<div class="timeline-body px-4 pb-4">
+<div class="text-muted text-small mb-3" data-fa="سپتامبر ۲۰۲۳ - تاکنون">September, 2023 - Present</div>
+<div data-fa="کار روی چند پروژه شامل طراحی و پیاده‌سازی اسکیمای دیتابیس با Django ORM، رفع اشکالات و باگ‌ها و موارد مشابه.">Some projects including designing and implementing database schemas using Django ORM,
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="0">
-              <div class="project-media">
-                <div id="carouselAccounting" class="carousel slide" data-bs-ride="false">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide1Modal">
-                        <img src="images/accounting-app-1.png" alt="Accounting App slide 1">
-                      </a>
-                    </div>
+troubleshooting issues and bugs and etc.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-                    <div class="carousel-item">
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide2Modal">
-                        <img src="images/accounting-app-2.png" alt="Accounting App slide 2">
-                      </a>
-                    </div>
+<div class="panel my-5" id="education">
+<div class="education-section">
+<div class="section-head">
+<span class="eyebrow" data-fa="/تحصیلات">/education</span>
+<h2 class="section-title" data-fa="تحصیلات">Education</h2>
+</div>
+<div class="timeline">
+<div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="200">
+<div class="timeline-head px-4 pt-3">
+<div class="h5" data-fa='کارشناسی مهندسی کامپیوتر <span class="text-muted h6">از دانشگاه MUST</span>'>Bachelor of Computer Science <span class="text-muted h6">from MUST</span></div>
+</div>
+<div class="timeline-body px-4 pb-4">
+<div class="text-muted text-small mb-3" data-fa="۲۰۲۰ - تاکنون">2020 - Present</div>
+<div data-fa="مهندسی کامپیوتر را در دانشگاه علوم و فناوری مازندران (MUST) خوانده‌ام.">I studied Computer Engineering at Mazandaran University of Science and Technology (MUST).</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-                    <div class="carousel-item">
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide3Modal">
-                        <img src="images/accounting-app-3.png" alt="Accounting App slide 3">
-                      </a>
-                    </div>
-                  </div>
+<div class="panel my-5 d-print-none" id="portfolio">
+<div class="section-head">
+<span class="eyebrow" data-fa="/نمونه‌کارها">/portfolio</span>
+<h2 class="section-title" data-fa="نمونه‌کارها">Portfolio</h2>
+</div>
+<div id="portfolio-section">
 
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselAccounting"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
+<div class="project-card" data-aos="fade-up" data-aos-delay="0">
+<div class="project-media">
+<div id="carouselAccounting" class="carousel slide" data-bs-ride="false">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide1Modal">
+<img src="images/accounting-app-1.png" alt="Accounting App slide 1">
+</a>
+</div>
+<div class="carousel-item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide2Modal">
+<img src="images/accounting-app-2.png" alt="Accounting App slide 2">
+</a>
+</div>
+<div class="carousel-item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide3Modal">
+<img src="images/accounting-app-3.png" alt="Accounting App slide 3">
+</a>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselAccounting"
+data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselAccounting"
+data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+<div class="project-body">
+<p class="project-tag" data-fa="پروژه جنگو">Django Project</p>
+<h3 data-fa="اپلیکیشن وب حسابداری شخصی">Personal Accounting Web Application</h3>
+<p data-fa="یک اپلیکیشن وب حسابداری مبتنی بر جنگو برای مدیریت تراکنش‌ها، هزینه‌ها، درآمدها و گزارش‌های مالی.">A Django-based web accounting application for managing transactions, expenses, income, and financial
 
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselAccounting"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
-              </div>
+reporting.</p>
+</div>
+</div>
 
+<div class="project-card" data-aos="fade-up" data-aos-delay="0">
+<a class="project-media" href="https://blackcut.pythonanywhere.com/" target="_blank">
+<img src="images/django-barbershop/django-barbershop.jpg" alt="Django Reservation System">
+</a>
+<div class="project-body">
+<p class="project-tag" data-fa="پروژه جنگو">Django Project</p>
+<h3 data-fa="سیستم رزرواسیون جنگو">Django Reservation System</h3>
+<p data-fa="این وب‌سایت با بک‌اند جنگو توسعه یافته و متناسب با نیازهای خاص یک مشتری طراحی شده است.">This website uses Django as backend and was developed to fit a customer's specific requirements.</p>
+<a class="project-link" href="https://blackcut.pythonanywhere.com/" target="_blank" data-fa="مشاهده پروژه ←">visit project →</a>
+</div>
+</div>
 
+<div class="project-card" data-aos="fade-up" data-aos-delay="50">
+<div class="project-media">
+<video controls>
+<source src="videos/flutter-barbershop.mp4" type="video/mp4">
+</video>
+</div>
+<div class="project-body">
+<p class="project-tag" data-fa="اپلیکیشن فلاتر">Flutter Application</p>
+<h3 data-fa="اپلیکیشن فلاتر برای آرایشگاه">Flutter Application for Barbershop</h3>
+<p data-fa="اپلیکیشن اندروید/iOS برای مدیریت نوبت‌دهی آرایشگاه که با استفاده از یک REST API داده‌ها را دریافت و مدیریت می‌کند.">Android/iOS application for managing barbershop reservations, using a REST API to fetch and
 
-              <div class="project-body">
-                <p class="project-tag">Django Project</p>
-                <h3>Personal Accounting Web Application</h3>
-                <p>A Django-based web accounting application for managing transactions, expenses, income, and financial
-                  reporting.</p>
-              </div>
-            </div>
+manipulate data.</p>
+</div>
+</div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="0">
-              <a class="project-media" href="https://blackcut.pythonanywhere.com/" target="_blank">
-                <img src="images/django-barbershop/django-barbershop.jpg" alt="Django Reservation System">
-              </a>
-              <div class="project-body">
-                <p class="project-tag">Django Project</p>
-                <h3>Django Reservation System</h3>
-                <p>This website uses Django as backend and was developed to fit a customer's specific requirements.</p>
-                <a class="project-link" href="https://blackcut.pythonanywhere.com/" target="_blank">visit project →</a>
-              </div>
-            </div>
+<div class="project-card" data-aos="fade-up" data-aos-delay="0">
+<a class="project-media" href="https://ntrweb.pythonanywhere.com/" target="_blank">
+<img src="images/project-1.jpg" alt="ToDoList and Notes App">
+</a>
+<div class="project-body">
+<p class="project-tag" data-fa="پروژه جنگو">Django Project</p>
+<h3 data-fa="اپلیکیشن یادداشت و لیست کارها">ToDoList and Notes App</h3>
+<p data-fa="یک پلتفرم پرسرعت مدیریت کارها با جنگو و رابط کاربری بوت‌استرپ که به‌صورت زنده و آنلاین برای مدیریت کارهای روزانه در دسترس است.">A high-performance to-do list platform built with Django and a Bootstrap frontend. Deployed and live
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="50">
-              <div class="project-media">
-                <video controls>
-                  <source src="videos/flutter-barbershop.mp4" type="video/mp4">
-                </video>
-              </div>
-              <div class="project-body">
-                <p class="project-tag">Flutter Application</p>
-                <h3>Flutter Application for Barbershop</h3>
-                <p>Android/iOS application for managing barbershop reservations, using a REST API to fetch and
-                  manipulate data.</p>
-              </div>
-            </div>
+for managing daily tasks.</p>
+<a class="project-link" href="https://ntrweb.pythonanywhere.com/" target="_blank" data-fa="مشاهده پروژه ←">visit project →</a>
+</div>
+</div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="0">
-              <a class="project-media" href="https://ntrweb.pythonanywhere.com/" target="_blank">
-                <img src="images/project-1.jpg" alt="ToDoList and Notes App">
-              </a>
-              <div class="project-body">
-                <p class="project-tag">Django Project</p>
-                <h3>ToDoList and Notes App</h3>
-                <p>A high-performance to-do list platform built with Django and a Bootstrap frontend. Deployed and live
-                  for managing daily tasks.</p>
-                <a class="project-link" href="https://ntrweb.pythonanywhere.com/" target="_blank">visit project →</a>
-              </div>
-            </div>
+<div class="project-card" data-aos="fade-up" data-aos-delay="50">
+<div class="project-media"><img src="images/project-2.jpg" alt="HR Management Software"></div>
+<div class="project-body">
+<p class="project-tag" data-fa="اپلیکیشن دسکتاپ پایتون">Python GUI App</p>
+<h3 data-fa="نرم‌افزار مدیریت منابع انسانی">HR Management Software</h3>
+<p data-fa="یک اپلیکیشن دسکتاپ برای انجام عملیات CRUD با استفاده از MySQL به‌عنوان پایگاه‌داده و PyQt برای رابط کاربری.">A desktop application enabling CRUD operations, using MySQL as the DBMS and PyQt for the GUI.</p>
+</div>
+</div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="50">
-              <div class="project-media"><img src="images/project-2.jpg" alt="HR Management Software"></div>
-              <div class="project-body">
-                <p class="project-tag">Python GUI App</p>
-                <h3>HR Management Software</h3>
-                <p>A desktop application enabling CRUD operations, using MySQL as the DBMS and PyQt for the GUI.</p>
-              </div>
-            </div>
+<div class="project-card" data-aos="fade-up" data-aos-delay="0">
+<div class="project-media"><img src="images/project-3.jpg" alt="IMDB Web Crawling Software"></div>
+<div class="project-body">
+<p class="project-tag">Python / Kivy / BeautifulSoup</p>
+<h3 data-fa="نرم‌افزار استخراج داده از IMDB">IMDB Web Crawling Software</h3>
+<p data-fa="یک پروژه وب‌اسکرپینگ با استفاده از BeautifulSoup و رابط کاربری Kivy برای استخراج و نمایش داده‌ها از IMDB.">A web scraping project using BeautifulSoup, with a Kivy GUI to extract and visualize data from IMDB.
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="0">
-              <div class="project-media"><img src="images/project-3.jpg" alt="IMDB Web Crawling Software"></div>
-              <div class="project-body">
-                <p class="project-tag">Python / Kivy / BeautifulSoup</p>
-                <h3>IMDB Web Crawling Software</h3>
-                <p>A web scraping project using BeautifulSoup, with a Kivy GUI to extract and visualize data from IMDB.
-                </p>
-              </div>
-            </div>
+</p>
+</div>
+</div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="50">
-              <div class="project-media">
-                <div id="carouselLibrary" class="carousel slide" data-bs-ride="false">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#slide1Modal"><img
-                          src="images/LibraryManagement1.png" alt="Library Management slide 1"></a>
-                    </div>
-                    <div class="carousel-item">
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#slide2Modal"><img
-                          src="images/LibraryManagement2.png" alt="Library Management slide 2"></a>
-                    </div>
-                    <div class="carousel-item">
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#slide3Modal"><img
-                          src="images/LibraryManagement3.png" alt="Library Management slide 3"></a>
-                    </div>
-                    <div class="carousel-item">
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#slide4Modal"><img
-                          src="images/LibraryManagement4.png" alt="Library Management slide 4"></a>
-                    </div>
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselLibrary"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselLibrary"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
+<div class="project-card" data-aos="fade-up" data-aos-delay="50">
+<div class="project-media">
+<div id="carouselLibrary" class="carousel slide" data-bs-ride="false">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<a href="#" data-bs-toggle="modal" data-bs-target="#slide1Modal"><img
+src="images/LibraryManagement1.png" alt="Library Management slide 1"></a>
+</div>
+<div class="carousel-item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#slide2Modal"><img
+src="images/LibraryManagement2.png" alt="Library Management slide 2"></a>
+</div>
+<div class="carousel-item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#slide3Modal"><img
+src="images/LibraryManagement3.png" alt="Library Management slide 3"></a>
+</div>
+<div class="carousel-item">
+<a href="#" data-bs-toggle="modal" data-bs-target="#slide4Modal"><img
+src="images/LibraryManagement4.png" alt="Library Management slide 4"></a>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselLibrary"
+data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselLibrary"
+data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+<div class="project-body">
+<p class="project-tag">C# / WPF / .NET / SQL Server</p>
+<h3 data-fa="اپلیکیشن مدیریت کتابخانه">Library Management App</h3>
+<p data-fa="یک اپلیکیشن دسکتاپ برای مدیریت کتابخانه، ساخته‌شده با سی‌شارپ (C#)، WPF، دات‌نت فریم‌ورک و SQL Server.">A desktop application for managing a library, built with C#, WPF, the .NET Framework and SQL Server.
 
-              </div>
-              <div class="project-body">
-                <p class="project-tag">C# / WPF / .NET / SQL Server</p>
-                <h3>Library Management App</h3>
-                <p>A desktop application for managing a library, built with C#, WPF, the .NET Framework and SQL Server.
-                </p>
-              </div>
-            </div>
+</p>
+</div>
+</div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="0">
-              <div class="project-media"><img src="images/Instagramprofiledownloader.jpg"
-                  alt="Instagram Profile Picture Downloader"></div>
-              <div class="project-body">
-                <p class="project-tag">Python / Qt</p>
-                <h3>Instagram Profile Picture Downloader</h3>
-                <p>Fetches profile data from Instagram and lets the user download profile pictures directly.</p>
-              </div>
-            </div>
+<div class="project-card" data-aos="fade-up" data-aos-delay="0">
+<div class="project-media"><img src="images/Instagramprofiledownloader.jpg"
+alt="Instagram Profile Picture Downloader"></div>
+<div class="project-body">
+<p class="project-tag">Python / Qt</p>
+<h3 data-fa="دانلودر عکس پروفایل اینستاگرام">Instagram Profile Picture Downloader</h3>
+<p data-fa="اطلاعات پروفایل را از اینستاگرام دریافت کرده و امکان دانلود مستقیم عکس پروفایل را فراهم می‌کند.">Fetches profile data from Instagram and lets the user download profile pictures directly.</p>
+</div>
+</div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="50">
-              <div class="project-media"><img src="images/currencyChecker.jpg" alt="Currency Checker Software"></div>
-              <div class="project-body">
-                <p class="project-tag">Python / Qt / Selenium</p>
-                <h3>Currency Checker Software</h3>
-                <p>A lightweight desktop app that fetches the latest USD exchange rate in real time and displays it in a
-                  simple GUI.</p>
-              </div>
-            </div>
+<div class="project-card" data-aos="fade-up" data-aos-delay="50">
+<div class="project-media"><img src="images/currencyChecker.jpg" alt="Currency Checker Software"></div>
+<div class="project-body">
+<p class="project-tag">Python / Qt / Selenium</p>
+<h3 data-fa="نرم‌افزار بررسی نرخ ارز">Currency Checker Software</h3>
+<p data-fa="یک اپلیکیشن دسکتاپ سبک که نرخ لحظه‌ای دلار را دریافت کرده و در یک رابط کاربری ساده نمایش می‌دهد.">A lightweight desktop app that fetches the latest USD exchange rate in real time and displays it in a
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="0">
-              <div class="project-media"><img src="images/IconConvertor.jpg" alt="Icon Convertor"></div>
-              <div class="project-body">
-                <p class="project-tag">Python / Qt</p>
-                <h3>Icon Convertor</h3>
-                <p>A desktop tool that converts common image formats to ICO icon format through an easy-to-use GUI.</p>
-              </div>
-            </div>
+simple GUI.</p>
+</div>
+</div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-delay="50">
-              <div class="project-media"><img src="images/NotroDNS.jpg" alt="DNS Changer"></div>
-              <div class="project-body">
-                <p class="project-tag">C# / .NET / WPF / Django / DRF</p>
-                <h3>DNS Changer</h3>
-                <p>A Windows WPF app that retrieves DNS configurations from a Django REST API and applies them to the
-                  system's network settings.</p>
-              </div>
-            </div>
+<div class="project-card" data-aos="fade-up" data-aos-delay="0">
+<div class="project-media"><img src="images/IconConvertor.jpg" alt="Icon Convertor"></div>
+<div class="project-body">
+<p class="project-tag">Python / Qt</p>
+<h3 data-fa="مبدل آیکون">Icon Convertor</h3>
+<p data-fa="یک ابزار دسکتاپ برای تبدیل فرمت‌های رایج تصویر به فرمت آیکون ICO با رابط کاربری ساده.">A desktop tool that converts common image formats to ICO icon format through an easy-to-use GUI.</p>
+</div>
+</div>
 
-          </div>
-        </div>
+<div class="project-card" data-aos="fade-up" data-aos-delay="50">
+<div class="project-media"><img src="images/NotroDNS.jpg" alt="DNS Changer"></div>
+<div class="project-body">
+<p class="project-tag">C# / .NET / WPF / Django / DRF</p>
+<h3 data-fa="تغییردهنده DNS">DNS Changer</h3>
+<p data-fa="یک اپلیکیشن ویندوزی مبتنی بر WPF که تنظیمات DNS را از یک Django REST API دریافت کرده و در تنظیمات شبکه سیستم اعمال می‌کند.">A Windows WPF app that retrieves DNS configurations from a Django REST API and applies them to the
 
-        <div class="panel my-5" id="certificates">
-          <div class="section-head">
-            <span class="eyebrow">/certificates</span>
-            <h2 class="section-title">Certificates &amp; Licenses</h2>
-          </div>
-          <div class="cert-grid">
-            <div class="cert-card">
-              <div class="cert-card-head">
-                <i class="fas fa-certificate"></i>
-                <div>
-                  <h3>5 Real-Time Use Cases using Machine Learning</h3>
-                  <div class="cert-meta">Udemy &middot; 08/05/2023</div>
-                </div>
-              </div>
-              <img src="images/certificates/Udemy - 5 Real-Time Use Cases using Machine Learning.jpg"
-                alt="Machine Learning certificate">
-            </div>
-            <div class="cert-card">
-              <div class="cert-card-head">
-                <i class="fas fa-certificate"></i>
-                <div>
-                  <h3>Seminar on Data Science &amp; AI Influences</h3>
-                  <div class="cert-meta">2023</div>
-                </div>
-              </div>
-              <img src="images/certificates/1701698567424.jpg" alt="Seminar certificate">
-            </div>
-          </div>
-        </div>
+system's network settings.</p>
+</div>
+</div>
 
-        <div class="panel my-5" id="contact">
-          <div class="contant-section">
-            <div class="section-head">
-              <span class="eyebrow">/contact</span>
-              <h2 class="section-title">Contact</h2>
-            </div>
-            <div class="row g-4">
-              <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-                <div class="contact-info-row"><i class="fas fa-phone"></i> +989382701160 (WhatsApp, Telegram)</div>
-                <div class="contact-info-row"><i class="far fa-envelope"></i> bardianikbakhsh@gmail.com</div>
-                <div class="mt-4 d-print-none">
-                  <form action="https://formspree.io/bardianikbakhsh@gmail.com" method="POST">
-                    <div class="form-outline mb-3">
-                      <input type="text" id="name" class="form-control" required />
-                      <label class="form-label" for="name">Name</label>
-                    </div>
-                    <div class="form-outline mb-3">
-                      <input type="email" id="email" class="form-control" required />
-                      <label class="form-label" for="email">Email address</label>
-                    </div>
-                    <div class="form-outline mb-3">
-                      <textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
-                      <label class="form-label" for="message">Message</label>
-                    </div>
-                    <button class="btn btn-info" type="submit" disabled>Send</button>
-                  </form>
-                </div>
-              </div>
-              <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-                <div class="status-panel">
-                  <div class="status-line"><span class="status-dot"></span> status --check &nbsp;→&nbsp; open to work
-                  </div>
-                  <p>Currently interning as a Python/Django developer and open to freelance or full-time backend, ML and
-                    Flutter work. Reach out through the form or find me on GitHub.</p>
-                  <div class="status-social">
-                    <a href="https://github.com/bardianz" title="Github"><i class="fab fa-github"></i></a>
-                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
 
-      </div>
-    </div>
-  </div>
+<div class="panel my-5" id="certificates">
+<div class="section-head">
+<span class="eyebrow" data-fa="/گواهینامه‌ها">/certificates</span>
+<h2 class="section-title" data-fa="گواهینامه‌ها و مجوزها">Certificates &amp; Licenses</h2>
+</div>
+<div class="cert-grid">
+<div class="cert-card">
+<div class="cert-card-head">
+<i class="fas fa-certificate"></i>
+<div>
+<h3>5 Real-Time Use Cases using Machine Learning</h3>
+<div class="cert-meta">Udemy &middot; 08/05/2023</div>
+</div>
+</div>
+<img src="images/certificates/Udemy - 5 Real-Time Use Cases using Machine Learning.jpg"
+alt="Machine Learning certificate">
+</div>
+<div class="cert-card">
+<div class="cert-card-head">
+<i class="fas fa-certificate"></i>
+<div>
+<h3 data-fa="سمینار علم داده و تأثیرات هوش مصنوعی">Seminar on Data Science &amp; AI Influences</h3>
+<div class="cert-meta">2023</div>
+</div>
+</div>
+<img src="images/certificates/1701698567424.jpg" alt="Seminar certificate">
+</div>
+</div>
+</div>
 
-  <footer class="site-footer pt-4 pb-4 text-center d-print-none">
-    <div class="container">
-      <div class="my-3">
-        <div class="h4">Bardia Nikbakhsh</div>
-        <div class="footer-nav">
-          <nav role="navigation">
-            <ul class="nav justify-content-center">
-              <li class="nav-item"><a class="nav-link" href="#" title="Twitter"><i class="fab fa-twitter"></i><span
-                    class="menu-title sr-only">Twitter</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#" title="Facebook"><i class="fab fa-facebook"></i><span
-                    class="menu-title sr-only">Facebook</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#" title="Instagram"><i class="fab fa-instagram"></i><span
-                    class="menu-title sr-only">Instagram</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="https://github.com/bardianz" title="Github"><i
-                    class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="text-small">
-        <div>Design - <a href="https://notroweb.ir/" target="_blank">Notroweb</a></div>
-      </div>
-    </div>
-  </footer>
+<div class="panel my-5" id="contact">
+<div class="contant-section">
+<div class="section-head">
+<span class="eyebrow" data-fa="/تماس">/contact</span>
+<h2 class="section-title" data-fa="تماس با من">Contact</h2>
+</div>
+<div class="row g-4">
+<div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+<div class="contact-info-row"><i class="fas fa-phone"></i> +989382701160 (WhatsApp, Telegram)</div>
+<div class="contact-info-row"><i class="far fa-envelope"></i> bardianikbakhsh@gmail.com</div>
+<div class="mt-4 d-print-none">
+<form action="https://formspree.io/bardianikbakhsh@gmail.com" method="POST">
+<div class="form-outline mb-3">
+<input type="text" id="name" class="form-control" required />
+<label class="form-label" for="name" data-fa="نام">Name</label>
+</div>
+<div class="form-outline mb-3">
+<input type="email" id="email" class="form-control" required />
+<label class="form-label" for="email" data-fa="آدرس ایمیل">Email address</label>
+</div>
+<div class="form-outline mb-3">
+<textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
+<label class="form-label" for="message" data-fa="پیام">Message</label>
+</div>
+<button class="btn btn-info" type="submit" disabled data-fa="ارسال">Send</button>
+</form>
+</div>
+</div>
+<div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+<div class="status-panel">
+<div class="status-line" data-fa='<span class="status-dot"></span> status --check &nbsp;→&nbsp; آماده همکاری'><span class="status-dot"></span> status --check &nbsp;→&nbsp; open to work
+</div>
+<p data-fa="در حال حاضر به‌عنوان کارآموز توسعه‌دهنده پایتون/جنگو مشغول به کار هستم و برای همکاری فریلنس یا تمام‌وقت در زمینه بک‌اند، یادگیری ماشین و فلاتر آماده‌ام. از طریق فرم یا در گیت‌هاب با من در تماس باشید.">Currently interning as a Python/Django developer and open to freelance or full-time backend, ML and
 
-  <script src="scripts/aos.js?ver=2.0.0"></script>
-  <script src="scripts/main.js?ver=2.0.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-    crossorigin="anonymous"></script>
+Flutter work. Reach out through the form or find me on GitHub.</p>
+<div class="status-social">
+<a href="https://github.com/bardianz" title="Github"><i class="fab fa-github"></i></a>
+<a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+<a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
+</div>
+</div>
+</div>
+
+<footer class="site-footer pt-4 pb-4 text-center d-print-none">
+<div class="container">
+<div class="my-3">
+<div class="h4">Bardia Nikbakhsh</div>
+<div class="footer-nav">
+<nav role="navigation">
+<ul class="nav justify-content-center">
+<li class="nav-item"><a class="nav-link" href="#" title="Twitter"><i class="fab fa-twitter"></i><span
+class="menu-title sr-only">Twitter</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#" title="Facebook"><i class="fab fa-facebook"></i><span
+class="menu-title sr-only">Facebook</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#" title="Instagram"><i class="fab fa-instagram"></i><span
+class="menu-title sr-only">Instagram</span></a></li>
+<li class="nav-item"><a class="nav-link" href="https://github.com/bardianz" title="Github"><i
+class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="text-small">
+<div>Design - <a href="https://notroweb.ir/" target="_blank">Notroweb</a></div>
+</div>
+</div>
+</footer>
+
+<script src="scripts/aos.js?ver=2.0.0"></script>
+<script src="scripts/main.js?ver=2.0.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+crossorigin="anonymous"></script>
+
+<!-- ===================== Added: language toggle logic ===================== -->
+<script>
+(function () {
+  var STORAGE_KEY = 'site-lang';
+  var htmlEl = document.documentElement;
+  var toggleBtn = document.getElementById('langToggle');
+
+  function applyLang(lang) {
+    var nodes = document.querySelectorAll('[data-fa]');
+    nodes.forEach(function (el) {
+      if (!el.hasAttribute('data-en')) {
+        el.setAttribute('data-en', el.innerHTML.trim());
+      }
+      el.innerHTML = lang === 'fa' ? el.getAttribute('data-fa') : el.getAttribute('data-en');
+    });
+
+    if (lang === 'fa') {
+      htmlEl.setAttribute('lang', 'fa');
+      htmlEl.setAttribute('dir', 'rtl');
+    } else {
+      htmlEl.setAttribute('lang', 'en-US');
+      htmlEl.setAttribute('dir', 'ltr');
+    }
+    if (toggleBtn) toggleBtn.textContent = lang === 'fa' ? 'EN' : 'FA';
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+  }
+
+  var saved = 'en';
+  try { saved = localStorage.getItem(STORAGE_KEY) || 'en'; } catch (e) {}
+  applyLang(saved);
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      var current = htmlEl.getAttribute('dir') === 'rtl' ? 'fa' : 'en';
+      applyLang(current === 'fa' ? 'en' : 'fa');
+    });
+  }
+})();
+</script>
 </body>
 
 </html>

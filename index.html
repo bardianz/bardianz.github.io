@@ -33,46 +33,157 @@ transform: translate(0) scale(1) !important;
 </style>
 </noscript>
 
-<!-- ===================== Added: navbar fix + language toggle + RTL support ===================== -->
+<!-- ===================== Added: navbar redesign + language toggle + RTL support ===================== -->
 <style>
-/* Fix: on desktop the collapsible nav must actually be shown.
-   Bootstrap's .collapse hides content by default; if main.css hides the
-   hamburger on desktop without forcing .site-nav open, nothing shows. */
-@media (min-width: 992px) {
-  .site-header .site-nav.collapse {
-    display: block !important;
-    height: auto !important;
-    visibility: visible !important;
-  }
-  .site-header .site-nav .nav {
-    display: flex !important;
-  }
+/* ---------- Broad font fix: force Vazirmatn on every text element in RTL mode
+   (main.css sets explicit fonts like IBM Plex Mono/Sans on many elements with
+   higher specificity than a plain "body" rule, so this needs to be forceful).
+   Icons (<i> tags from Font Awesome) are excluded so glyphs keep rendering. ---------- */
+html[dir="rtl"] body,
+html[dir="rtl"] body *:not(i) {
+  font-family: 'Vazirmatn', 'IBM Plex Sans', Arial, sans-serif !important;
 }
 
-/* Language toggle button */
-.lang-toggle {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, .35);
-  color: inherit;
+/* ---------- Keep mixed Latin/terminal-style lines stable in RTL ---------- */
+.code-line {
+  direction: ltr !important;
+  unicode-bidi: plaintext;
+  text-align: left;
+}
+
+/* ---------- Anchor offset so the sticky header never covers a section title ---------- */
+.page-content .panel[id] {
+  scroll-margin-top: 92px;
+}
+
+/* ============ Navbar: redesigned ============ */
+.site-header {
+  background: rgba(10, 12, 16, .78) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+.site-header .nav-bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex-wrap: wrap;
+  gap: .5rem 1rem;
+  padding: .7rem 0;
+}
+.site-header .site-title {
+  display: inline-flex !important;
+  align-items: center;
+  gap: .5rem;
+  color: #f2f2f5 !important;
+  text-decoration: none !important;
+  font-family: 'IBM Plex Mono', monospace;
+  order: 1;
+}
+.nav-bar-actions {
+  display: flex !important;
+  align-items: center;
+  gap: .6rem;
+  order: 2;
+}
+.site-header .site-nav {
+  order: 3;
+  flex-basis: 100%;
+}
+@media (min-width: 992px) {
+  .site-header .nav-bar { flex-wrap: nowrap !important; }
+  .site-header .site-nav { order: 2; flex-basis: auto; flex: 1 1 auto; }
+  .nav-bar-actions { order: 3; }
+}
+
+/* nav links */
+.site-header .site-nav .nav {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: .75rem 0;
+}
+@media (min-width: 992px) {
+  .site-header .site-nav .nav {
+    justify-content: flex-end;
+    padding: 0;
+  }
+}
+.site-header .site-nav .nav-link {
+  color: #d7d9e0 !important;
+  padding: .35rem .1rem !important;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .95rem;
+  transition: color .15s ease;
+}
+.site-header .site-nav .nav-link:hover,
+.site-header .site-nav .nav-link:focus {
+  color: #4ec9f5 !important;
+}
+@media (max-width: 991.98px) {
+  .site-header .site-nav .nav { flex-direction: column; align-items: flex-start; gap: .1rem; }
+}
+
+/* hamburger */
+.site-header .nav-toggle {
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, .25) !important;
+  color: #f2f2f5 !important;
   border-radius: 6px;
-  padding: .3rem .7rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+@media (min-width: 992px) {
+  .site-header .nav-toggle { display: none !important; }
+}
+
+/* language toggle - redesigned as a small pill, same spot on mobile + desktop */
+.lang-toggle {
+  display: inline-flex !important;
+  align-items: center;
+  gap: .4rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, .3);
+  color: #f2f2f5;
+  border-radius: 999px;
+  padding: .35rem .85rem;
   font-size: .8rem;
   font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: .05em;
+  letter-spacing: .04em;
   cursor: pointer;
-  line-height: 1;
+  white-space: nowrap;
+  flex: none;
 }
 .lang-toggle:hover {
   background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .5);
+}
+.lang-toggle i {
+  font-size: .75rem;
+  opacity: .85;
 }
 
-/* RTL / Persian support */
-html[dir="rtl"] body {
-  font-family: 'Vazirmatn', 'IBM Plex Sans', Arial, sans-serif;
+/* ============ Carousel arrows: more visible ============ */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 12%;
 }
-html[dir="rtl"] .project-link::after,
-html[dir="rtl"] .status-line {
-  direction: rtl;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, .55);
+  border-radius: 50%;
+  padding: 1.15rem;
+  background-size: 55% 55%;
 }
 </style>
 </head>
@@ -179,12 +290,16 @@ html[dir="rtl"] .status-line {
 class="window-dots"><span></span><span></span><span></span></span><span
 class="site-title-text">bardia@resume:~</span></a>
 
-<button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">FA</button>
-
+<div class="nav-bar-actions">
+<button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+<i class="fas fa-globe" aria-hidden="true"></i><span class="lang-toggle-text">FA</span>
+</button>
 <button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
 aria-expanded="false" aria-label="Toggle navigation">
 <i class="fas fa-bars"></i>
 </button>
+</div>
+
 <div class="site-nav collapse" id="siteNav">
 <nav role="navigation">
 <ul class="nav">
@@ -196,8 +311,10 @@ class="menu-title" data-fa="مهارت‌ها">skills</span></a></li>
 class="menu-title" data-fa="سوابق کاری">experience</span></a></li>
 <li class="nav-item"><a class="nav-link" href="#education" title="Education"><span
 class="menu-title" data-fa="تحصیلات">education</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#portfolio" title="Portfolio"><span
-class="menu-title" data-fa="نمونه‌کارها">portfolio</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span
+class="menu-title" data-fa="پروژه‌ها">projects</span></a></li>
+<li class="nav-item"><a class="nav-link" href="#military" title="Military Service"><span
+class="menu-title" data-fa="خدمت سربازی">military</span></a></li>
 <li class="nav-item"><a class="nav-link" href="#certificates" title="Certificates"><span
 class="menu-title" data-fa="گواهینامه‌ها">certificates</span></a></li>
 <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span
@@ -232,8 +349,8 @@ Changer</a></li>
 </div>
 <div class="header-bio">
 <div data-aos="zoom-in" data-aos-delay="0">
-<h2 class="h1">Bardia Nikbakhsh</h2>
-<p class="role-line" data-fa="$ whoami &nbsp;→&nbsp; مهندس نرم‌افزار">$ whoami &nbsp;→&nbsp; Software Engineer</p>
+<h2 class="h1" data-fa="بردیا نیک بخش">Bardia Nikbakhsh</h2>
+<p class="role-line code-line" data-fa="$ whoami &nbsp;→&nbsp; مهندس نرم‌افزار">$ whoami &nbsp;→&nbsp; Software Engineer</p>
 </div>
 <div class="header-social d-print-none" data-aos="zoom-in" data-aos-delay="200">
 <ul class="nav">
@@ -248,9 +365,9 @@ class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li
 </ul>
 </div>
 <div class="hero-cta d-print-none">
-<a class="btn btn-outline-light shadow-sm" href="#" data-aos="fade-right"
+<a class="btn btn-outline-light shadow-sm code-line" href="#" data-aos="fade-right"
 data-aos-delay="700" data-fa="./دانلود_رزومه">./download_cv</a>
-<a class="btn btn-info shadow-sm" href="#contact" data-aos="fade-left"
+<a class="btn btn-info shadow-sm code-line" href="#contact" data-aos="fade-left"
 data-aos-delay="700" data-fa="./تماس">./contact</a>
 </div>
 </div>
@@ -267,66 +384,46 @@ data-aos-delay="700" data-fa="./تماس">./contact</a>
 </div>
 <div class="row">
 <div class="col-md-6">
+<p data-fa="سلام، من بردیا نیک‌بخش هستم؛ یک توسعه‌دهنده وب با تخصص در جنگو و پایتون. علاوه بر مهارت‌های توسعه وب، در ساخت رابط‌های کاربری گرافیکی (GUI) با فریم‌ورک‌های پایتون مانند PyQt، Tkinter و Kivy نیز تجربه دارم.">Hi, I'm Bardia Nikbakhsh, and I'm a web developer with expertise in Django, Python. In addition to my
 
-<p data-fa="سلام، من بردیا نیک‌بخش هستم؛ یک توسعه‌دهنده نرم‌افزار با تمرکز بر پایتون و جنگو.">
-Hi, I’m Bardia Nikbakhsh, a software developer with a focus on Python and Django.
+web development skills, I have experience creating Graphical User Interfaces (GUIs) using Python
+frameworks such as PyQT, Tkinter, and Kivy.
 </p>
+<p data-fa="به‌طور خاص، در زمینه توسعه و پیاده‌سازی مدل‌های یادگیری ماشین با استفاده از کتابخانه‌هایی مانند TensorFlow، Keras و Scikit-learn فعالیت داشته‌ام. با تکنیک‌های مختلف یادگیری ماشین از جمله یادگیری نظارت‌شده، بدون نظارت و یادگیری عمیق آشنا هستم.">Specifically, I have worked on developing and implementing machine learning models using Python
 
-<p data-fa="با استفاده از پایتون و جنگو روی اپلیکیشن‌های وب و توسعه بخش بک‌اند کار کرده‌ام. همچنین در ساخت رابط‌های کاربری دسکتاپ و موبایل با ابزارهای پایتون مانند PyQt، Tkinter و Kivy تجربه دارم.">
-I have worked on web applications and backend development using Python and Django. I also have some experience building desktop and mobile interfaces with Python tools such as PyQt, Tkinter, and Kivy.
+libraries such as TensorFlow, Keras, and Scikit-learn. I am familiar with various machine learning
+techniques such as supervised and unsupervised learning, and deep learning.
 </p>
+<p data-fa="همچنین با سیستم‌عامل لینوکس آشنا هستم و با خط فرمان (CLI) و شل‌اسکریپت‌نویسی در لینوکس کار کرده‌ام.">Additionally, I am familiar with Linux operating system and have experience working with Linux
 
-<p data-fa="با کتابخانه‌های یادگیری ماشین از جمله Scikit-learn، TensorFlow و Keras کار کرده‌ام و با مفاهیم پایه یادگیری نظارت‌شده، یادگیری بدون نظارت و یادگیری عمیق آشنا هستم.">
-I have worked with machine learning libraries including Scikit-learn, TensorFlow, and Keras, and have a basic understanding of supervised and unsupervised learning and deep learning.
-</p>
+command line interface (CLI) and shell scripting.</p>
+<p data-fa="به سرعت یاد می‌گیرم و از همکاری با دیگران برای حل مسائل پیچیده و ارائه راهکارهای نوآورانه لذت می‌برم.">I'm a quick learner and enjoy collaborating with others to solve complex problems and deliver
 
-<p data-fa="همچنین با لینوکس، خط فرمان و شل‌اسکریپت‌نویسی آشنا هستم.">
-I’m also familiar with Linux, the command line, and shell scripting.
-</p>
-
-<p data-fa="از یادگیری تکنولوژی‌های جدید، کار کردن با دیگران و ساختن چیزهایی که کاربردی و مفید هستند لذت می‌برم.">
-I enjoy learning new technologies, working with others, and building things that are useful and practical.
-</p>
-
+innovative solutions.</p>
 </div>
 <div class="col-md-5 offset-md-1">
 <h3 class="h5 fw-semibold mb-3" data-fa="بیوگرافی">Bio</h3>
 <div class="bio-list">
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="far fa-calendar-alt"></i> تولد'>
-<i class="far fa-calendar-alt"></i> born
-</div>
+<div class="bio-label" data-fa='<i class="far fa-calendar-alt"></i> تولد'><i class="far fa-calendar-alt"></i> born</div>
 <div class="bio-value">2001</div>
 </div>
-
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="far fa-envelope"></i> ایمیل'>
-<i class="far fa-envelope"></i> email
-</div>
+<div class="bio-label" data-fa='<i class="far fa-envelope"></i> ایمیل'><i class="far fa-envelope"></i> email</div>
 <div class="bio-value">Bardia.Nikbakhsh@gmail.com</div>
 </div>
-
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="fab fa-skype"></i> اسکایپ'>
-<i class="fab fa-skype"></i> skype
-</div>
-<div class="bio-value">-</div>
-</div>
-
-<div class="bio-row">
-<div class="bio-label" data-fa='<i class="fas fa-phone"></i> تلفن'>
-<i class="fas fa-phone"></i> phone
-</div>
+<div class="bio-label" data-fa='<i class="fas fa-phone"></i> تلفن'><i class="fas fa-phone"></i> phone</div>
 <div class="bio-value">+989382701160</div>
 </div>
-
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="fas fa-map-marker-alt"></i> آدرس'>
-<i class="fas fa-map-marker-alt"></i> address
+<div class="bio-label" data-fa='<i class="fas fa-shield-alt"></i> خدمت اجباری سربازی'><i class="fas fa-shield-alt"></i> Mandatory Military Service</div>
+<div class="bio-value" data-fa="انجام‌شده">Done</div>
 </div>
+<div class="bio-row">
+<div class="bio-label" data-fa='<i class="fas fa-map-marker-alt"></i> آدرس'><i class="fas fa-map-marker-alt"></i> address</div>
 <div class="bio-value" data-fa="مازندران، ایران">Mazandaran, Iran</div>
 </div>
-
 </div>
 </div>
 </div>
@@ -363,10 +460,22 @@ I enjoy learning new technologies, working with others, and building things that
 <div class="timeline">
 <div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
 <div class="timeline-head px-4 pt-3">
+<div class="h5" data-fa='توسعه‌دهنده پایتون، جنگو <span class="text-muted h6">در شرکت دانش‌بنیان ابتکار ایمن ساز</span>'>Python, Django Developer <span class="text-muted h6">at Ebtekar Imen Saz</span></div>
+</div>
+<div class="timeline-body px-4 pb-4">
+<div class="text-muted text-small mb-3 code-line" data-fa="اسفند ۱۴۰۲ &nbsp;→&nbsp; فوریه ۲۰۲۴ &nbsp;تا&nbsp; دی ۱۴۰۳ &nbsp;→&nbsp; ژانویه ۲۰۲۵">February 2024 - January 2025</div>
+<div data-fa="در بخش نرم‌افزار شرکت، پروژه‌هایی از جمله ساخت سیستم‌های رزرواسیون و نوبت‌دهی و همچنین ساخت وب‌سایت برای پروژه‌های شبیه‌ساز آتش‌نشانی و موارد مشابه را انجام دادم.">Worked on projects including building reservation and appointment-booking systems, and developing
+
+websites for fire-simulator projects, among others.
+</div>
+</div>
+</div>
+<div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="100">
+<div class="timeline-head px-4 pt-3">
 <div class="h5" data-fa='کارآموز پایتون، جنگو <span class="text-muted h6">در شرکت سپهرار سیستم</span>'>Python, Django Intern <span class="text-muted h6">at Sepehrar System</span></div>
 </div>
 <div class="timeline-body px-4 pb-4">
-<div class="text-muted text-small mb-3" data-fa="سپتامبر ۲۰۲۳ - تاکنون">September, 2023 - Present</div>
+<div class="text-muted text-small mb-3 code-line" data-fa="تیر ۱۴۰۱ &nbsp;→&nbsp; ژوئن ۲۰۲۲ &nbsp;تا&nbsp; بهمن ۱۴۰۲ &nbsp;→&nbsp; ژانویه ۲۰۲۴">June 2022 - January 2024</div>
 <div data-fa="کار روی چند پروژه شامل طراحی و پیاده‌سازی اسکیمای دیتابیس با Django ORM، رفع اشکالات و باگ‌ها و موارد مشابه.">Some projects including designing and implementing database schemas using Django ORM,
 
 troubleshooting issues and bugs and etc.
@@ -389,18 +498,22 @@ troubleshooting issues and bugs and etc.
 <div class="h5" data-fa='کارشناسی مهندسی کامپیوتر <span class="text-muted h6">از دانشگاه MUST</span>'>Bachelor of Computer Science <span class="text-muted h6">from MUST</span></div>
 </div>
 <div class="timeline-body px-4 pb-4">
-<div class="text-muted text-small mb-3" data-fa="۲۰۲۰ - تاکنون">2020 - Present</div>
+<div class="text-muted text-small mb-3 code-line" data-fa="مهر ۱۳۹۹ &nbsp;→&nbsp; اکتبر ۲۰۲۰ &nbsp;تا&nbsp; خرداد ۱۴۰۳ &nbsp;→&nbsp; ژوئن ۲۰۲۴">October 2020 - June 2024</div>
 <div data-fa="مهندسی کامپیوتر را در دانشگاه علوم و فناوری مازندران (MUST) خوانده‌ام.">I studied Computer Engineering at Mazandaran University of Science and Technology (MUST).</div>
+<ul class="mt-2 mb-0 ps-3">
+<li data-fa="نفر دوم مهندسی کامپیوتر">Ranked 2nd in the Computer Engineering program</li>
+<li data-fa="برگزار کننده سمینار هوش مصنوعی">Organized an AI seminar</li>
+</ul>
 </div>
 </div>
 </div>
 </div>
 </div>
 
-<div class="panel my-5 d-print-none" id="portfolio">
+<div class="panel my-5 d-print-none" id="projects">
 <div class="section-head">
-<span class="eyebrow" data-fa="/نمونه‌کارها">/portfolio</span>
-<h2 class="section-title" data-fa="نمونه‌کارها">Portfolio</h2>
+<span class="eyebrow" data-fa="/پروژه‌ها">/projects</span>
+<h2 class="section-title" data-fa="پروژه‌ها">Projects</h2>
 </div>
 <div id="portfolio-section">
 
@@ -592,6 +705,24 @@ system's network settings.</p>
 </div>
 </div>
 
+<div class="panel my-5" id="military">
+<div class="section-head">
+<span class="eyebrow" data-fa="/خدمت سربازی">/military</span>
+<h2 class="section-title" data-fa="خدمت اجباری سربازی">Military Service</h2>
+</div>
+<div class="timeline">
+<div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
+<div class="timeline-head px-4 pt-3">
+<div class="h5" data-fa="خدمت اجباری سربازی">Mandatory Military Service</div>
+</div>
+<div class="timeline-body px-4 pb-4">
+<div class="text-muted text-small mb-3" data-fa="۱۴۰۳ - ۱۴۰۵">2024 - 2026</div>
+<div data-fa="خدمت در نیروی دریایی ارتش.">Served in the Navy of the Iranian Army.</div>
+</div>
+</div>
+</div>
+</div>
+
 <div class="panel my-5" id="certificates">
 <div class="section-head">
 <span class="eyebrow" data-fa="/گواهینامه‌ها">/certificates</span>
@@ -633,30 +764,19 @@ alt="Machine Learning certificate">
 <div class="contact-info-row"><i class="fas fa-phone"></i> +989382701160 (WhatsApp, Telegram)</div>
 <div class="contact-info-row"><i class="far fa-envelope"></i> bardianikbakhsh@gmail.com</div>
 <div class="mt-4 d-print-none">
-<form action="https://formspree.io/bardianikbakhsh@gmail.com" method="POST">
-<div class="form-outline mb-3">
-<input type="text" id="name" class="form-control" required />
-<label class="form-label" for="name" data-fa="نام">Name</label>
-</div>
-<div class="form-outline mb-3">
-<input type="email" id="email" class="form-control" required />
-<label class="form-label" for="email" data-fa="آدرس ایمیل">Email address</label>
-</div>
-<div class="form-outline mb-3">
-<textarea class="form-control" style="resize: none;" id="message" rows="4" required></textarea>
-<label class="form-label" for="message" data-fa="پیام">Message</label>
-</div>
-<button class="btn btn-info" type="submit" disabled data-fa="ارسال">Send</button>
-</form>
+<a class="btn btn-info" href="mailto:Bardianikbakhsh@gmail.com" target="_blank" rel="noopener"
+data-fa='<i class="far fa-paper-plane"></i>&nbsp; ایمیل بزنید'>
+<i class="far fa-paper-plane"></i>&nbsp; Send an Email
+</a>
 </div>
 </div>
 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
 <div class="status-panel">
-<div class="status-line" data-fa='<span class="status-dot"></span> status --check &nbsp;→&nbsp; آماده همکاری'><span class="status-dot"></span> status --check &nbsp;→&nbsp; open to work
+<div class="status-line code-line" data-fa='<span class="status-dot"></span> status --check &nbsp;→&nbsp; آماده همکاری'><span class="status-dot"></span> status --check &nbsp;→&nbsp; open to work
 </div>
-<p data-fa="در حال حاضر به‌عنوان کارآموز توسعه‌دهنده پایتون/جنگو مشغول به کار هستم و برای همکاری فریلنس یا تمام‌وقت در زمینه بک‌اند، یادگیری ماشین و فلاتر آماده‌ام. از طریق فرم یا در گیت‌هاب با من در تماس باشید.">Currently interning as a Python/Django developer and open to freelance or full-time backend, ML and
+<p data-fa="در حال حاضر به‌عنوان توسعه‌دهنده پایتون/جنگو فعالیت می‌کنم و برای همکاری فریلنس یا تمام‌وقت در زمینه بک‌اند، یادگیری ماشین و فلاتر آماده‌ام. از طریق ایمیل یا در گیت‌هاب با من در تماس باشید.">Working as a Python/Django developer and open to freelance or full-time backend, ML and Flutter work.
 
-Flutter work. Reach out through the form or find me on GitHub.</p>
+Reach out by email or find me on GitHub.</p>
 <div class="status-social">
 <a href="https://github.com/bardianz" title="Github"><i class="fab fa-github"></i></a>
 <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
@@ -675,7 +795,7 @@ Flutter work. Reach out through the form or find me on GitHub.</p>
 <footer class="site-footer pt-4 pb-4 text-center d-print-none">
 <div class="container">
 <div class="my-3">
-<div class="h4">Bardia Nikbakhsh</div>
+<div class="h4" data-fa="بردیا نیک بخش">Bardia Nikbakhsh</div>
 <div class="footer-nav">
 <nav role="navigation">
 <ul class="nav justify-content-center">
@@ -712,6 +832,7 @@ crossorigin="anonymous"></script>
   var STORAGE_KEY = 'site-lang';
   var htmlEl = document.documentElement;
   var toggleBtn = document.getElementById('langToggle');
+  var toggleLabel = toggleBtn ? toggleBtn.querySelector('.lang-toggle-text') : null;
 
   function applyLang(lang) {
     var nodes = document.querySelectorAll('[data-fa]');
@@ -729,7 +850,7 @@ crossorigin="anonymous"></script>
       htmlEl.setAttribute('lang', 'en-US');
       htmlEl.setAttribute('dir', 'ltr');
     }
-    if (toggleBtn) toggleBtn.textContent = lang === 'fa' ? 'EN' : 'FA';
+    if (toggleLabel) toggleLabel.textContent = lang === 'fa' ? 'EN' : 'FA';
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
   }
 

@@ -48,7 +48,6 @@ html[dir="rtl"] body *:not(i) {
 .code-line {
   direction: ltr !important;
   unicode-bidi: plaintext;
-  text-align: left;
 }
 
 /* ---------- Anchor offset so the sticky header never covers a section title ---------- */
@@ -58,7 +57,7 @@ html[dir="rtl"] body *:not(i) {
 
 /* ============ Navbar: redesigned ============ */
 .site-header {
-  background: rgba(10, 12, 16, .78) !important;
+  background: rgba(13, 27, 58, .86) !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: sticky;
@@ -171,6 +170,46 @@ html[dir="rtl"] body *:not(i) {
 .lang-toggle i {
   font-size: .75rem;
   opacity: .85;
+}
+
+/* services dropdown: explicit show/hide + positioning so it doesn't stay open
+   or collapse oddly inside the flex nav */
+.site-header .nav-item.dropdown {
+  position: relative;
+}
+.site-header .dropdown-menu {
+  display: none !important;
+  position: absolute;
+  z-index: 1040;
+  min-width: 10rem;
+  margin: .25rem 0 0;
+  padding: .4rem 0;
+  background: #0d1b3a;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+}
+.site-header .dropdown-menu.show {
+  display: block !important;
+}
+@media (max-width: 991.98px) {
+  .site-header .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: rgba(255, 255, 255, .04);
+    margin-top: .35rem;
+  }
+}
+.site-header .dropdown-item {
+  color: #d7d9e0 !important;
+  padding: .45rem 1rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: .9rem;
+}
+.site-header .dropdown-item:hover,
+.site-header .dropdown-item:focus {
+  background: rgba(255, 255, 255, .08);
+  color: #4ec9f5 !important;
 }
 
 /* ============ Carousel arrows: more visible ============ */
@@ -384,22 +423,17 @@ data-aos-delay="700" data-fa="./تماس">./contact</a>
 </div>
 <div class="row">
 <div class="col-md-6">
-<p data-fa="سلام، من بردیا نیک‌بخش هستم؛ یک توسعه‌دهنده وب با تخصص در جنگو و پایتون. علاوه بر مهارت‌های توسعه وب، در ساخت رابط‌های کاربری گرافیکی (GUI) با فریم‌ورک‌های پایتون مانند PyQt، Tkinter و Kivy نیز تجربه دارم.">Hi, I'm Bardia Nikbakhsh, and I'm a web developer with expertise in Django, Python. In addition to my
+<p data-fa="سلام، من بردیا نیک‌بخش هستم؛ یک توسعه‌دهنده نرم‌افزار با تمرکز بر پایتون و جنگو.">Hi, I'm Bardia Nikbakhsh, a software developer with a focus on Python and Django.</p>
+<p data-fa="روی اپلیکیشن‌های وب و توسعه بک‌اند با پایتون و جنگو کار کرده‌ام. همچنین کمی تجربه در ساخت رابط‌های دسکتاپ و موبایل با ابزارهای پایتون مانند PyQt، Tkinter و Kivy دارم.">I have worked on web applications and backend development using Python and Django. I also have some
 
-web development skills, I have experience creating Graphical User Interfaces (GUIs) using Python
-frameworks such as PyQT, Tkinter, and Kivy.
-</p>
-<p data-fa="به‌طور خاص، در زمینه توسعه و پیاده‌سازی مدل‌های یادگیری ماشین با استفاده از کتابخانه‌هایی مانند TensorFlow، Keras و Scikit-learn فعالیت داشته‌ام. با تکنیک‌های مختلف یادگیری ماشین از جمله یادگیری نظارت‌شده، بدون نظارت و یادگیری عمیق آشنا هستم.">Specifically, I have worked on developing and implementing machine learning models using Python
+experience building desktop and mobile interfaces with Python tools such as PyQt, Tkinter, and Kivy.</p>
+<p data-fa="با کتابخانه‌های یادگیری ماشین از جمله Scikit-learn، TensorFlow و Keras کار کرده‌ام و درک پایه‌ای از یادگیری نظارت‌شده، بدون نظارت و یادگیری عمیق دارم.">I have worked with machine learning libraries including Scikit-learn, TensorFlow, and Keras, and have
 
-libraries such as TensorFlow, Keras, and Scikit-learn. I am familiar with various machine learning
-techniques such as supervised and unsupervised learning, and deep learning.
-</p>
-<p data-fa="همچنین با سیستم‌عامل لینوکس آشنا هستم و با خط فرمان (CLI) و شل‌اسکریپت‌نویسی در لینوکس کار کرده‌ام.">Additionally, I am familiar with Linux operating system and have experience working with Linux
+a basic understanding of supervised and unsupervised learning and deep learning.</p>
+<p data-fa="همچنین با لینوکس، خط فرمان و شل‌اسکریپت‌نویسی آشنا هستم.">I'm also familiar with Linux, the command line, and shell scripting.</p>
+<p data-fa="از یادگیری فناوری‌های جدید، همکاری با دیگران، و ساختن چیزهایی که مفید و کاربردی هستند لذت می‌برم.">I enjoy learning new technologies, working with others, and building things that are useful and
 
-command line interface (CLI) and shell scripting.</p>
-<p data-fa="به سرعت یاد می‌گیرم و از همکاری با دیگران برای حل مسائل پیچیده و ارائه راهکارهای نوآورانه لذت می‌برم.">I'm a quick learner and enjoy collaborating with others to solve complex problems and deliver
-
-innovative solutions.</p>
+practical.</p>
 </div>
 <div class="col-md-5 offset-md-1">
 <h3 class="h5 fw-semibold mb-3" data-fa="بیوگرافی">Bio</h3>

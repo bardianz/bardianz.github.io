@@ -3,7 +3,6 @@
 
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bardia Nikbakhsh — Software Engineer</title>
 <meta name="description"
@@ -32,199 +31,6 @@ transform: translate(0) scale(1) !important;
 }
 </style>
 </noscript>
-
-<!-- ===================== Added: navbar redesign + language toggle + RTL support ===================== -->
-<style>
-/* ---------- Broad font fix: force Vazirmatn on every text element in RTL mode
-   (main.css sets explicit fonts like IBM Plex Mono/Sans on many elements with
-   higher specificity than a plain "body" rule, so this needs to be forceful).
-   Icons (<i> tags from Font Awesome) are excluded so glyphs keep rendering. ---------- */
-html[dir="rtl"] body,
-html[dir="rtl"] body *:not(i) {
-  font-family: 'Vazirmatn', 'IBM Plex Sans', Arial, sans-serif !important;
-}
-
-/* ---------- Keep mixed Latin/terminal-style lines stable in RTL ---------- */
-.code-line {
-  direction: ltr !important;
-  unicode-bidi: plaintext;
-}
-
-/* ---------- Anchor offset so the sticky header never covers a section title ---------- */
-.page-content .panel[id] {
-  scroll-margin-top: 92px;
-}
-
-/* ============ Navbar: redesigned ============ */
-.site-header {
-  background: rgba(13, 27, 58, .86) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  position: sticky;
-  top: 0;
-  z-index: 1030;
-  border-bottom: 1px solid rgba(255, 255, 255, .08);
-}
-.site-header .nav-bar {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  flex-wrap: wrap;
-  gap: .5rem 1rem;
-  padding: .7rem 0;
-}
-.site-header .site-title {
-  display: inline-flex !important;
-  align-items: center;
-  gap: .5rem;
-  color: #f2f2f5 !important;
-  text-decoration: none !important;
-  font-family: 'IBM Plex Mono', monospace;
-  order: 1;
-}
-.nav-bar-actions {
-  display: flex !important;
-  align-items: center;
-  gap: .6rem;
-  order: 2;
-}
-.site-header .site-nav {
-  order: 3;
-  flex-basis: 100%;
-}
-@media (min-width: 992px) {
-  .site-header .nav-bar { flex-wrap: nowrap !important; }
-  .site-header .site-nav { order: 2; flex-basis: auto; flex: 1 1 auto; }
-  .nav-bar-actions { order: 3; }
-}
-
-/* nav links */
-.site-header .site-nav .nav {
-  display: flex !important;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: .25rem 1.25rem;
-  list-style: none;
-  margin: 0;
-  padding: .75rem 0;
-}
-@media (min-width: 992px) {
-  .site-header .site-nav .nav {
-    justify-content: flex-end;
-    padding: 0;
-  }
-}
-.site-header .site-nav .nav-link {
-  color: #d7d9e0 !important;
-  padding: .35rem .1rem !important;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: .95rem;
-  transition: color .15s ease;
-}
-.site-header .site-nav .nav-link:hover,
-.site-header .site-nav .nav-link:focus {
-  color: #4ec9f5 !important;
-}
-@media (max-width: 991.98px) {
-  .site-header .site-nav .nav { flex-direction: column; align-items: flex-start; gap: .1rem; }
-}
-
-/* hamburger */
-.site-header .nav-toggle {
-  background: transparent !important;
-  border: 1px solid rgba(255, 255, 255, .25) !important;
-  color: #f2f2f5 !important;
-  border-radius: 6px;
-  width: 2.3rem;
-  height: 2.3rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: none;
-}
-@media (min-width: 992px) {
-  .site-header .nav-toggle { display: none !important; }
-}
-
-/* language toggle - redesigned as a small pill, same spot on mobile + desktop */
-.lang-toggle {
-  display: inline-flex !important;
-  align-items: center;
-  gap: .4rem;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, .3);
-  color: #f2f2f5;
-  border-radius: 999px;
-  padding: .35rem .85rem;
-  font-size: .8rem;
-  font-family: 'IBM Plex Mono', monospace;
-  letter-spacing: .04em;
-  cursor: pointer;
-  white-space: nowrap;
-  flex: none;
-}
-.lang-toggle:hover {
-  background: rgba(255, 255, 255, .1);
-  border-color: rgba(255, 255, 255, .5);
-}
-.lang-toggle i {
-  font-size: .75rem;
-  opacity: .85;
-}
-
-/* services dropdown: explicit show/hide + positioning so it doesn't stay open
-   or collapse oddly inside the flex nav */
-.site-header .nav-item.dropdown {
-  position: relative;
-}
-.site-header .dropdown-menu {
-  display: none !important;
-  position: absolute;
-  z-index: 1040;
-  min-width: 10rem;
-  margin: .25rem 0 0;
-  padding: .4rem 0;
-  background: #0d1b3a;
-  border: 1px solid rgba(255, 255, 255, .15);
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
-}
-.site-header .dropdown-menu.show {
-  display: block !important;
-}
-@media (max-width: 991.98px) {
-  .site-header .dropdown-menu {
-    position: static;
-    box-shadow: none;
-    background: rgba(255, 255, 255, .04);
-    margin-top: .35rem;
-  }
-}
-.site-header .dropdown-item {
-  color: #d7d9e0 !important;
-  padding: .45rem 1rem;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: .9rem;
-}
-.site-header .dropdown-item:hover,
-.site-header .dropdown-item:focus {
-  background: rgba(255, 255, 255, .08);
-  color: #4ec9f5 !important;
-}
-
-/* ============ Carousel arrows: more visible ============ */
-.carousel-control-prev,
-.carousel-control-next {
-  width: 12%;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, .55);
-  border-radius: 50%;
-  padding: 1.15rem;
-  background-size: 55% 55%;
-}
-</style>
 </head>
 
 <body id="top">
@@ -358,14 +164,13 @@ class="menu-title" data-fa="خدمت سربازی">military</span></a></li>
 class="menu-title" data-fa="گواهینامه‌ها">certificates</span></a></li>
 <li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span
 class="menu-title" data-fa="تماس">contact</span></a></li>
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-aria-expanded="false" data-fa="خدمات">services</a>
-<ul class="dropdown-menu">
-<li><a class="dropdown-item" target="_blank" href="https://dnschanger.pythonanywhere.com"
+<li class="nav-item nav-services">
+<span class="nav-link nav-services-label" data-fa="خدمات">services</span>
+<ul class="services-list">
+<li><a target="_blank" href="https://dnschanger.pythonanywhere.com"
 data-fa="تغییردهنده DNS">DNS
 Changer</a></li>
-<li><a class="dropdown-item" target="_blank" href="https://ntrweb.pythonanywhere.com/" data-fa="یادداشت‌یار">Note Keeper</a>
+<li><a target="_blank" href="https://ntrweb.pythonanywhere.com/" data-fa="یادداشت‌یار">Note Keeper</a>
 </li>
 </ul>
 </li>
@@ -853,9 +658,6 @@ class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li
 
 <script src="scripts/aos.js?ver=2.0.0"></script>
 <script src="scripts/main.js?ver=2.0.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
 integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
 crossorigin="anonymous"></script>

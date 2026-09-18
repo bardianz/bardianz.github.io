@@ -113,18 +113,26 @@ header.site-header {
   left: 0;
   right: 0;
   z-index: 1030;
-  background: rgba(11, 20, 32, 0.92);
+  background: rgba(13, 27, 58, 0.86);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--ink-line);
 }
 
 .nav-bar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.85rem 0;
-  gap: 1rem;
+  padding: 0.7rem 0;
+  gap: 0.5rem 1rem;
   position: relative;
+}
+
+.nav-bar-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .window-dots { display: inline-flex; gap: 6px; margin-right: 0.85rem; flex-shrink: 0; }
@@ -138,13 +146,36 @@ header.site-header {
 .site-title {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-mono);
   font-size: 1rem;
-  color: #f4f6f8;
+  color: #f2f2f5;
   line-height: 1;
   margin: 0;
   flex-shrink: 0;
 }
+
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #f2f2f5;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.lang-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.lang-toggle i { font-size: 0.75rem; opacity: 0.85; }
 
 .site-title .site-title-text::after {
   content: "";
@@ -161,10 +192,10 @@ header.site-header {
 .nav-toggle {
   display: none;
   background: transparent;
-  border: 1px solid var(--ink-line);
-  color: #f4f6f8;
-  border-radius: var(--radius-sm);
-  width: 38px; height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #f2f2f5;
+  border-radius: 6px;
+  width: 2.3rem; height: 2.3rem;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
@@ -172,9 +203,13 @@ header.site-header {
 }
 .nav-toggle:hover { border-color: var(--accent); color: var(--accent); }
 
+.site-nav { flex-basis: 100%; }
+
 .site-nav ul {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 0.25rem 1.25rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -182,10 +217,10 @@ header.site-header {
 
 .site-nav .nav-link {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: rgba(244, 246, 248, 0.68);
+  font-size: 0.95rem;
+  color: #d7d9e0;
   opacity: 1;
-  padding: 0.35rem 0;
+  padding: 0.35rem 0.1rem;
   white-space: nowrap;
   transition: color 0.15s ease;
 }
@@ -193,18 +228,33 @@ header.site-header {
 .site-nav .nav-link::before { content: "./"; color: var(--accent); opacity: 0.85; }
 
 .site-nav .nav-link:hover,
-.site-nav .nav-link:focus { color: #fff; }
+.site-nav .nav-link:focus { color: #4ec9f5; }
 
-.site-nav .dropdown-menu {
-  background: var(--ink-soft);
-  border: 1px solid var(--ink-line);
+.nav-services {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+}
+.nav-services-label { cursor: default; }
+
+.services-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.services-list a {
   font-family: var(--font-mono);
   font-size: 0.85rem;
+  color: rgba(244, 246, 248, 0.68);
+  white-space: nowrap;
 }
-
-.site-nav .dropdown-item { color: rgba(244, 246, 248, 0.8); }
-.site-nav .dropdown-item:hover,
-.site-nav .dropdown-item:focus { background: rgba(245, 166, 35, 0.12); color: #fff; }
+.services-list a:hover,
+.services-list a:focus { color: #4ec9f5; }
 
 .nav-item + .nav-item { margin-left: 1.35rem; }
 
@@ -226,14 +276,27 @@ header.site-header {
 
   .site-nav ul {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
+    gap: 0.1rem;
     padding: 0.5rem 1.25rem 1.25rem;
   }
   .nav-item + .nav-item { margin-left: 0; }
   .site-nav .nav-item { border-bottom: 1px dashed var(--ink-line); }
   .site-nav .nav-item:last-child { border-bottom: none; }
   .site-nav .nav-link { display: block; padding: 0.75rem 0; }
-  .site-nav .dropdown-menu { position: static; border: none; background: transparent; padding-left: 1rem; }
+  .nav-services { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+  .services-list { flex-direction: column; align-items: flex-start; gap: 0.5rem; padding-left: 1rem; }
+}
+
+/* Bootstrap's .collapse hides .site-nav (display:none) until JS adds .show —
+   that's correct for the mobile slide-down menu above, but on desktop the nav must
+   always be visible since there is no toggle button to reveal it. */
+@media (min-width: 992px) {
+  .nav-bar { flex-wrap: nowrap; }
+  .site-nav.collapse:not(.show) { display: block !important; }
+  .site-nav { flex-basis: auto; flex: 1 1 auto; order: 1; }
+  .site-nav ul { justify-content: flex-end; }
+  .nav-bar-actions { order: 2; }
 }
 
 /* ---------- hero ---------- */
@@ -398,34 +461,44 @@ header.site-header {
 }
 
 /* ---------- timeline ---------- */
-.timeline { position: relative; }
+.timeline {
+  --tl-gutter: 28px; /* space reserved for the line + dot */
+  --tl-line-x: 14px; /* line position inside that gutter */
+  --tl-dot: 14px;    /* dot diameter */
+  position: relative;
+  padding-left: var(--tl-gutter);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0.5rem;
+  left: var(--tl-line-x);
+  width: 2px;
+  background: var(--line);
+}
 
 .timeline-card {
   position: relative;
-  margin-left: 22px;
+  padding-left: 20px;
   padding-bottom: 0.5rem;
 }
 
 .timeline-card:before {
   content: '';
   position: absolute;
-  width: 14px; height: 14px;
+  top: 22px;
+  left: calc(var(--tl-line-x) - var(--tl-gutter) - var(--tl-dot) / 2);
+  width: var(--tl-dot);
+  height: var(--tl-dot);
   border-radius: 50%;
-  top: 22px; left: -29px;
   background: var(--card);
   border: 3px solid var(--accent);
   z-index: 2;
 }
 
 .timeline-card-success:before { border-color: var(--accent-2); }
-
-.timeline-body {
-  border-left: 2px solid var(--line);
-  padding-left: 1.6rem !important;
-  margin-left: -6px;
-}
-
-.timeline-card:last-child .timeline-body { border-left-color: transparent; }
 
 .timeline-head .h5 { font-size: 1.05rem; margin-bottom: 0.15rem; }
 .timeline-head .text-muted { font-family: var(--font-mono); font-size: 0.85rem; }
@@ -482,6 +555,13 @@ header.site-header {
 .project-media .carousel-item img { height: 100%; object-fit: cover; }
 .project-media .carousel-control-prev,
 .project-media .carousel-control-next { width: 12%; }
+.project-media .carousel-control-prev-icon,
+.project-media .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 50%;
+  padding: 1.15rem;
+  background-size: 55% 55%;
+}
 
 .modal-content { border-radius: var(--radius); border: none; }
 
@@ -525,17 +605,6 @@ header.site-header {
 }
 .contact-info-row:last-child { border-bottom: none; }
 .contact-info-row i { color: var(--accent-dark); width: 20px; text-align: center; }
-
-.form-control {
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--line);
-  font-family: var(--font-body);
-}
-.form-control:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.18);
-}
-.form-label { color: var(--text-muted); }
 
 .status-panel {
   background: var(--ink);
@@ -596,10 +665,31 @@ footer.site-footer .text-small { font-family: var(--font-mono); font-size: 0.78r
   .bio-list .bio-label { width: 100%; }
 }
 
+/* ---------- RTL / language toggle ---------- */
+/* main.css sets explicit fonts (IBM Plex Mono/Sans) on many selectors with
+   higher specificity than a plain "body" rule, so switching to Persian needs
+   a forceful, single override rather than repeating it per-selector.
+   Icons (<i> tags from Font Awesome) are excluded so glyphs keep rendering. */
+html[dir="rtl"] body,
+html[dir="rtl"] body *:not(i) {
+  font-family: 'Vazirmatn', 'IBM Plex Sans', Arial, sans-serif !important;
+}
+
+/* Keep mixed Latin/terminal-style lines (e.g. "$ whoami → ...") stable in RTL */
+.code-line {
+  direction: ltr !important;
+  unicode-bidi: plaintext;
+}
+
+/* Anchor offset so the fixed header never covers a section title */
+.page-content .panel[id] {
+  scroll-margin-top: 92px;
+}
+
 /* ---------- print ---------- */
 @media print {
   [data-aos] { opacity: 1 !important; transform: translate(0) scale(1) !important; }
-  header.site-header, footer.site-footer, .status-panel, form { display: none !important; }
+  header.site-header, footer.site-footer, .status-panel { display: none !important; }
   body { background: #fff !important; }
   .container { width: auto; max-width: 100%; padding: 0; }
   .panel { box-shadow: none !important; border: none; padding: 0.5rem 0; page-break-inside: avoid; }

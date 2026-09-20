@@ -512,14 +512,17 @@ a:focus-visible, button:focus-visible {
 .project-media .carousel-item a { display: block; height: 100%; }
 .carousel { direction: ltr; }
 
+/* arrows: same look on light and dark screenshots (dark disc + white ring) */
 .carousel-control-prev,
-.carousel-control-next { width: 12%; }
+.carousel-control-next { width: 12%; opacity: 0.9; }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  padding: 1.15rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.55);
-  background-size: 55% 55%;
+  background-color: rgba(13, 27, 58, 0.75);
+  background-size: 50% 50%;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
 }
 
 /* lightbox */

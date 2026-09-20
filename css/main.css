@@ -508,7 +508,7 @@ a:focus-visible, button:focus-visible {
 /* carousel inside a card */
 .project-media .carousel,
 .project-media .carousel-inner,
-.project-media .carousel-item,
+.project-media .carousel-item { height: 100%; }
 .project-media .carousel-item a { display: block; height: 100%; }
 .carousel { direction: ltr; }
 

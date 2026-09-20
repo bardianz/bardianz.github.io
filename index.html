@@ -1,707 +1,433 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bardia Nikbakhsh — Software Engineer</title>
-<meta name="description"
-content="Bardia Nikbakhsh — Software Engineer specializing in Python, Django and Machine Learning.">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-<link rel="preload" as="style"
-href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap" />
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap"
-media="print" onload="this.media='all'" />
-<noscript>
-<link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap" />
-</noscript>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-<link href="css/font-awesome/css/all.min.css?ver=2.0.0" rel="stylesheet">
-<link href="css/aos.css?ver=2.0.0" rel="stylesheet">
-<link href="css/main.css?ver=2.0.0" rel="stylesheet">
+<meta name="description" content="Bardia Nikbakhsh — Software Engineer specializing in Python, Django and Machine Learning.">
+<meta name="theme-color" content="#0d1b3a">
 <link rel="icon" href="favicon.ico">
-<noscript>
-<style type="text/css">
-[data-aos] {
-opacity: 1 !important;
-transform: translate(0) scale(1) !important;
-}
-</style>
-</noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Vazirmatn:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="css/main.css?ver=3.0.0">
 </head>
 
 <body id="top">
 
-<!-- ===================== Accounting App Modals ===================== -->
-<div class="modal fade" id="accountingSlide1Modal" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-xl">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<img class="d-block w-100" src="images/accounting-app-1.png" alt="Accounting App - Slide 1">
-</div>
-</div>
-</div>
-</div>
-
-<div class="modal fade" id="accountingSlide2Modal" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-xl">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<img class="d-block w-100" src="images/accounting-app-2.png" alt="Accounting App - Slide 2">
-</div>
-</div>
-</div>
-</div>
-
-<div class="modal fade" id="accountingSlide3Modal" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-xl">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<img class="d-block w-100" src="images/accounting-app-3.png" alt="Accounting App - Slide 3">
-</div>
-</div>
-</div>
-</div>
-
-<!-- ===================== Library Management Modals ===================== -->
-<div class="modal fade" id="slide1Modal" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-xl">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<img class="d-block w-100" src="images/LibraryManagement1.png" alt="Library Management - Slide 1">
-</div>
-</div>
-</div>
-</div>
-
-<div class="modal fade" id="slide2Modal" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-xl">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<img class="d-block w-100" src="images/LibraryManagement2.png" alt="Library Management - Slide 2">
-</div>
-</div>
-</div>
-</div>
-
-<div class="modal fade" id="slide3Modal" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-xl">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<img class="d-block w-100" src="images/LibraryManagement3.png" alt="Library Management - Slide 3">
-</div>
-</div>
-</div>
-</div>
-
-<div class="modal fade" id="slide4Modal" tabindex="-1" aria-hidden="true">
-<div class="modal-dialog modal-xl">
-<div class="modal-content">
-<div class="modal-header">
-<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-</div>
-<div class="modal-body">
-<img class="d-block w-100" src="images/LibraryManagement4.png" alt="Library Management - Slide 4">
-</div>
-</div>
-</div>
-</div>
-
-<header class="site-header d-print-none">
+<!-- ============================== Navbar ============================== -->
+<header class="navbar navbar-expand-xl fixed-top site-header d-print-none">
 <div class="container">
-<div class="nav-bar">
-<a class="site-title mb-0" href="#top"><span
-class="window-dots"><span></span><span></span><span></span></span><span
-class="site-title-text">bardia@resume:~</span></a>
 
-<div class="nav-bar-actions">
-<button class="lang-toggle" id="langToggle" type="button" aria-label="Toggle language">
+<a class="brand" href="#top" aria-label="bardia@resume — back to top">
+<span class="window-dots" aria-hidden="true"><span></span><span></span><span></span></span>
+<span class="brand-text">bardia@resume:~</span>
+</a>
+
+<div class="site-actions order-xl-last">
+<button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
 <i class="fas fa-globe" aria-hidden="true"></i><span class="lang-toggle-text">FA</span>
 </button>
-<button class="nav-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
-aria-expanded="false" aria-label="Toggle navigation">
-<i class="fas fa-bars"></i>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav"
+aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
+<i class="fas fa-bars" aria-hidden="true"></i>
 </button>
 </div>
 
-<div class="site-nav collapse" id="siteNav">
-<nav role="navigation">
-<ul class="nav">
-<li class="nav-item"><a class="nav-link" href="#about" title="About"><span
-class="menu-title" data-fa="درباره">about</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#skills" title="Skills"><span
-class="menu-title" data-fa="مهارت‌ها">skills</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#experience" title="Experience"><span
-class="menu-title" data-fa="سوابق کاری">experience</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#education" title="Education"><span
-class="menu-title" data-fa="تحصیلات">education</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#projects" title="Projects"><span
-class="menu-title" data-fa="پروژه‌ها">projects</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#military" title="Military Service"><span
-class="menu-title" data-fa="خدمت سربازی">military</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#certificates" title="Certificates"><span
-class="menu-title" data-fa="گواهینامه‌ها">certificates</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#contact" title="Contact"><span
-class="menu-title" data-fa="تماس">contact</span></a></li>
-<li class="nav-item nav-services">
-<span class="nav-link nav-services-label" data-fa="خدمات">services</span>
-<ul class="services-list">
-<li><a target="_blank" href="https://dnschanger.pythonanywhere.com"
-data-fa="تغییردهنده DNS">DNS
-Changer</a></li>
-<li><a target="_blank" href="https://ntrweb.pythonanywhere.com/" data-fa="یادداشت‌یار">Note Keeper</a>
-</li>
+<nav class="collapse navbar-collapse" id="siteNav" aria-label="Main">
+<ul class="navbar-nav site-nav-list">
+<li class="nav-item"><a class="nav-link" href="#about" data-fa="درباره">about</a></li>
+<li class="nav-item"><a class="nav-link" href="#skills" data-fa="مهارت‌ها">skills</a></li>
+<li class="nav-item"><a class="nav-link" href="#experience" data-fa="سوابق کاری">experience</a></li>
+<li class="nav-item"><a class="nav-link" href="#education" data-fa="تحصیلات">education</a></li>
+<li class="nav-item"><a class="nav-link" href="#projects" data-fa="پروژه‌ها">projects</a></li>
+<li class="nav-item"><a class="nav-link" href="#military" data-fa="خدمت سربازی">military</a></li>
+<li class="nav-item"><a class="nav-link" href="#certificates" data-fa="گواهینامه‌ها">certificates</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact" data-fa="تماس">contact</a></li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-fa="خدمات">services</a>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><a class="dropdown-item" href="https://dnschanger.pythonanywhere.com" target="_blank" rel="noopener" data-fa="تغییردهنده DNS">DNS Changer</a></li>
+<li><a class="dropdown-item" href="https://ntrweb.pythonanywhere.com/" target="_blank" rel="noopener" data-fa="یادداشت‌یار">Note Keeper</a></li>
 </ul>
 </li>
 </ul>
 </nav>
-</div>
-</div>
+
 </div>
 </header>
 
-<div class="page-content">
-<div class="container">
-<div class="resume-container">
-<div class="panel my-5" id="intro">
-<div class="cover bg-image"><img src="images/header-background.jpg" alt="">
-<div class="mask">
-<div class="hero-inner">
-<div class="avatar-frame" data-aos="zoom-in" data-aos-delay="0">
-<img src="images/20250802_180004.jpg" alt="Bardia Nikbakhsh" />
-</div>
-<div class="header-bio">
-<div data-aos="zoom-in" data-aos-delay="0">
-<h2 class="h1" data-fa="بردیا نیک بخش">Bardia Nikbakhsh</h2>
-<p class="role-line code-line" data-fa="$ whoami &nbsp;→&nbsp; مهندس نرم‌افزار">$ whoami &nbsp;→&nbsp; Software Engineer</p>
-</div>
-<div class="header-social d-print-none" data-aos="zoom-in" data-aos-delay="200">
-<ul class="nav">
-<li class="nav-item"><a class="nav-link" href="#" title="Twitter"><i
-class="fab fa-twitter"></i><span class="menu-title sr-only">Twitter</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#" title="Facebook"><i
-class="fab fa-facebook"></i><span class="menu-title sr-only">Facebook</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#" title="Instagram"><i
-class="fab fa-instagram"></i><span class="menu-title sr-only">Instagram</span></a></li>
-<li class="nav-item"><a class="nav-link" href="https://github.com/bardianz" title="Github"><i
-class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
-</ul>
-</div>
-<div class="hero-cta d-print-none">
-<a class="btn btn-outline-light shadow-sm code-line" href="#" data-aos="fade-right"
-data-aos-delay="700" data-fa="./دانلود_رزومه">./download_cv</a>
-<a class="btn btn-info shadow-sm code-line" href="#contact" data-aos="fade-left"
-data-aos-delay="700" data-fa="./تماس">./contact</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+<!-- ============================== Content ============================== -->
+<main class="container page">
 
-<div class="panel my-5" id="about">
-<div class="about-section">
+<!-- Intro -->
+<section class="panel hero" id="intro">
+<div class="hero-inner">
+<div class="avatar-frame"><img src="images/20250802_180004.jpg" alt="Bardia Nikbakhsh"></div>
+<h1 class="hero-name" data-fa="بردیا نیک بخش">Bardia Nikbakhsh</h1>
+<p class="hero-role code-line" data-fa="$ whoami → مهندس نرم‌افزار">$ whoami → Software Engineer</p>
+<ul class="social-links d-print-none">
+<li><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+<li><a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+<li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="https://github.com/bardianz" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+</ul>
+<div class="hero-cta d-print-none">
+<a class="btn btn-ghost code-line" href="#" data-fa="./دانلود_رزومه">./download_cv</a>
+<a class="btn btn-accent code-line" href="#contact" data-fa="./تماس">./contact</a>
+</div>
+</div>
+</section>
+
+<!-- About -->
+<section class="panel" id="about">
 <div class="section-head">
 <span class="eyebrow" data-fa="/درباره">/about</span>
 <h2 class="section-title" data-fa="درباره من">About Me</h2>
 </div>
-<div class="row">
-<div class="col-md-6">
+<div class="about-grid">
+<div class="about-text">
 <p data-fa="سلام، من بردیا نیک‌بخش هستم؛ یک توسعه‌دهنده نرم‌افزار با تمرکز بر پایتون و جنگو.">Hi, I'm Bardia Nikbakhsh, a software developer with a focus on Python and Django.</p>
-<p data-fa="روی اپلیکیشن‌های وب و توسعه بک‌اند با پایتون و جنگو کار کرده‌ام. همچنین کمی تجربه در ساخت رابط‌های دسکتاپ و موبایل با ابزارهای پایتون مانند PyQt، Tkinter و Kivy دارم.">I have worked on web applications and backend development using Python and Django. I also have some
-
-experience building desktop and mobile interfaces with Python tools such as PyQt, Tkinter, and Kivy.</p>
-<p data-fa="با کتابخانه‌های یادگیری ماشین از جمله Scikit-learn، TensorFlow و Keras کار کرده‌ام و درک پایه‌ای از یادگیری نظارت‌شده، بدون نظارت و یادگیری عمیق دارم.">I have worked with machine learning libraries including Scikit-learn, TensorFlow, and Keras, and have
-
-a basic understanding of supervised and unsupervised learning and deep learning.</p>
+<p data-fa="روی اپلیکیشن‌های وب و توسعه بک‌اند با پایتون و جنگو کار کرده‌ام. همچنین کمی تجربه در ساخت رابط‌های دسکتاپ و موبایل با ابزارهای پایتون مانند PyQt، Tkinter و Kivy دارم.">I have worked on web applications and backend development using Python and Django. I also have some experience building desktop and mobile interfaces with Python tools such as PyQt, Tkinter, and Kivy.</p>
+<p data-fa="با کتابخانه‌های یادگیری ماشین از جمله Scikit-learn، TensorFlow و Keras کار کرده‌ام و درک پایه‌ای از یادگیری نظارت‌شده، بدون نظارت و یادگیری عمیق دارم.">I have worked with machine learning libraries including Scikit-learn, TensorFlow, and Keras, and have a basic understanding of supervised and unsupervised learning and deep learning.</p>
 <p data-fa="همچنین با لینوکس، خط فرمان و شل‌اسکریپت‌نویسی آشنا هستم.">I'm also familiar with Linux, the command line, and shell scripting.</p>
-<p data-fa="از یادگیری فناوری‌های جدید، همکاری با دیگران، و ساختن چیزهایی که مفید و کاربردی هستند لذت می‌برم.">I enjoy learning new technologies, working with others, and building things that are useful and
-
-practical.</p>
+<p data-fa="از یادگیری فناوری‌های جدید، همکاری با دیگران، و ساختن چیزهایی که مفید و کاربردی هستند لذت می‌برم.">I enjoy learning new technologies, working with others, and building things that are useful and practical.</p>
 </div>
-<div class="col-md-5 offset-md-1">
-<h3 class="h5 fw-semibold mb-3" data-fa="بیوگرافی">Bio</h3>
+
+<div class="about-bio">
+<h3 class="bio-title" data-fa="بیوگرافی">Bio</h3>
 <div class="bio-list">
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="far fa-calendar-alt"></i> تولد'><i class="far fa-calendar-alt"></i> born</div>
-<div class="bio-value">2001</div>
+<div class="bio-label"><i class="far fa-calendar-days" aria-hidden="true"></i><span data-fa="تولد">born</span></div>
+<div class="bio-value" data-fa="۱۳۷۹">2001</div>
 </div>
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="far fa-envelope"></i> ایمیل'><i class="far fa-envelope"></i> email</div>
+<div class="bio-label"><i class="far fa-envelope" aria-hidden="true"></i><span data-fa="ایمیل">email</span></div>
 <div class="bio-value">Bardia.Nikbakhsh@gmail.com</div>
 </div>
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="fas fa-phone"></i> تلفن'><i class="fas fa-phone"></i> phone</div>
-<div class="bio-value">+989382701160</div>
+<div class="bio-label"><i class="fas fa-phone" aria-hidden="true"></i><span data-fa="تلفن">phone</span></div>
+<div class="bio-value"><bdi dir="ltr">+989382701160</bdi></div>
 </div>
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="fas fa-shield-alt"></i> خدمت اجباری سربازی'><i class="fas fa-shield-alt"></i> Mandatory Military Service</div>
+<div class="bio-label"><i class="fas fa-shield-halved" aria-hidden="true"></i><span data-fa="خدمت اجباری سربازی">Mandatory Military Service</span></div>
 <div class="bio-value" data-fa="انجام‌شده">Done</div>
 </div>
 <div class="bio-row">
-<div class="bio-label" data-fa='<i class="fas fa-map-marker-alt"></i> آدرس'><i class="fas fa-map-marker-alt"></i> address</div>
+<div class="bio-label"><i class="fas fa-location-dot" aria-hidden="true"></i><span data-fa="آدرس">address</span></div>
 <div class="bio-value" data-fa="مازندران، ایران">Mazandaran, Iran</div>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
+</section>
 
-<div class="panel my-5" id="skills">
-<div class="skills-section">
+<!-- Skills -->
+<section class="panel" id="skills">
 <div class="section-head">
 <span class="eyebrow" data-fa="/مهارت‌ها">/skills</span>
 <h2 class="section-title" data-fa="مهارت‌های حرفه‌ای">Professional Skills</h2>
 </div>
 <div class="skills-grid">
-<div class="skill-chip"><i class="fab fa-python"></i>Python</div>
-<div class="skill-chip"><i class="fas fa-layer-group"></i>Django</div>
-<div class="skill-chip"><i class="fab fa-linux"></i><span data-fa="سیستم‌عامل لینوکس">Linux OS</span></div>
-<div class="skill-chip"><i class="fas fa-brain"></i><span data-fa="یادگیری ماشین">Machine Learning</span></div>
-<div class="skill-chip"><i class="fas fa-bolt"></i>Celery</div>
-<div class="skill-chip"><i class="fab fa-git-alt"></i>Git</div>
-<div class="skill-chip"><i class="fas fa-database"></i>PostgreSQL, MySQL</div>
-<div class="skill-chip"><i class="fab fa-docker"></i>Docker</div>
-<div class="skill-chip"><i class="fas fa-cubes"></i>MongoDB, Redis</div>
-<div class="skill-chip"><i class="fas fa-mobile-alt"></i>Flutter</div>
+<div class="skill-chip"><i class="fab fa-python" aria-hidden="true"></i>Python</div>
+<div class="skill-chip"><i class="fas fa-layer-group" aria-hidden="true"></i>Django</div>
+<div class="skill-chip"><i class="fab fa-linux" aria-hidden="true"></i><span data-fa="سیستم‌عامل لینوکس">Linux OS</span></div>
+<div class="skill-chip"><i class="fas fa-brain" aria-hidden="true"></i><span data-fa="یادگیری ماشین">Machine Learning</span></div>
+<div class="skill-chip"><i class="fas fa-bolt" aria-hidden="true"></i>Celery</div>
+<div class="skill-chip"><i class="fab fa-git-alt" aria-hidden="true"></i>Git</div>
+<div class="skill-chip"><i class="fas fa-database" aria-hidden="true"></i>PostgreSQL, MySQL</div>
+<div class="skill-chip"><i class="fab fa-docker" aria-hidden="true"></i>Docker</div>
+<div class="skill-chip"><i class="fas fa-cubes" aria-hidden="true"></i>MongoDB, Redis</div>
+<div class="skill-chip"><i class="fas fa-mobile-screen-button" aria-hidden="true"></i>Flutter</div>
 </div>
-</div>
-</div>
+</section>
 
-<div class="panel my-5" id="experience">
-<div class="work-experience-section">
+<!-- Experience -->
+<section class="panel" id="experience">
 <div class="section-head">
 <span class="eyebrow" data-fa="/سوابق کاری">/experience</span>
 <h2 class="section-title" data-fa="سوابق کاری">Work Experience</h2>
 </div>
 <div class="timeline">
-<div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
-<div class="timeline-head px-4 pt-3">
-<div class="h5" data-fa='توسعه‌دهنده پایتون، جنگو <span class="text-muted h6">در شرکت دانش‌بنیان ابتکار ایمن ساز</span>'>Python, Django Developer <span class="text-muted h6">at Ebtekar Imen Saz</span></div>
+<article class="tl-item">
+<h3 class="tl-title" data-fa='توسعه‌دهنده پایتون، جنگو <span class="tl-org">در شرکت دانش‌بنیان ابتکار ایمن ساز</span>'>Python, Django Developer <span class="tl-org">at Ebtekar Imen Saz</span></h3>
+<p class="tl-date" data-fa="اسفند ۱۴۰۲ → فوریه ۲۰۲۴ تا دی ۱۴۰۳ → ژانویه ۲۰۲۵">February 2024 - January 2025</p>
+<p class="tl-text" data-fa="در بخش نرم‌افزار شرکت، پروژه‌هایی از جمله ساخت سیستم‌های رزرواسیون و نوبت‌دهی و همچنین ساخت وب‌سایت برای پروژه‌های شبیه‌ساز آتش‌نشانی و موارد مشابه را انجام دادم.">Worked on projects including building reservation and appointment-booking systems, and developing websites for fire-simulator projects, among others.</p>
+</article>
+<article class="tl-item">
+<h3 class="tl-title" data-fa='کارآموز پایتون، جنگو <span class="tl-org">در شرکت سپهرار سیستم</span>'>Python, Django Intern <span class="tl-org">at Sepehrar System</span></h3>
+<p class="tl-date" data-fa="تیر ۱۴۰۱ → ژوئن ۲۰۲۲ تا بهمن ۱۴۰۲ → ژانویه ۲۰۲۴">June 2022 - January 2024</p>
+<p class="tl-text" data-fa="کار روی چند پروژه شامل طراحی و پیاده‌سازی اسکیمای دیتابیس با Django ORM، رفع اشکالات و باگ‌ها و موارد مشابه.">Some projects including designing and implementing database schemas using Django ORM, troubleshooting issues and bugs and etc.</p>
+</article>
 </div>
-<div class="timeline-body px-4 pb-4">
-<div class="text-muted text-small mb-3 code-line" data-fa="اسفند ۱۴۰۲ &nbsp;→&nbsp; فوریه ۲۰۲۴ &nbsp;تا&nbsp; دی ۱۴۰۳ &nbsp;→&nbsp; ژانویه ۲۰۲۵">February 2024 - January 2025</div>
-<div data-fa="در بخش نرم‌افزار شرکت، پروژه‌هایی از جمله ساخت سیستم‌های رزرواسیون و نوبت‌دهی و همچنین ساخت وب‌سایت برای پروژه‌های شبیه‌ساز آتش‌نشانی و موارد مشابه را انجام دادم.">Worked on projects including building reservation and appointment-booking systems, and developing
+</section>
 
-websites for fire-simulator projects, among others.
-</div>
-</div>
-</div>
-<div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="100">
-<div class="timeline-head px-4 pt-3">
-<div class="h5" data-fa='کارآموز پایتون، جنگو <span class="text-muted h6">در شرکت سپهرار سیستم</span>'>Python, Django Intern <span class="text-muted h6">at Sepehrar System</span></div>
-</div>
-<div class="timeline-body px-4 pb-4">
-<div class="text-muted text-small mb-3 code-line" data-fa="تیر ۱۴۰۱ &nbsp;→&nbsp; ژوئن ۲۰۲۲ &nbsp;تا&nbsp; بهمن ۱۴۰۲ &nbsp;→&nbsp; ژانویه ۲۰۲۴">June 2022 - January 2024</div>
-<div data-fa="کار روی چند پروژه شامل طراحی و پیاده‌سازی اسکیمای دیتابیس با Django ORM، رفع اشکالات و باگ‌ها و موارد مشابه.">Some projects including designing and implementing database schemas using Django ORM,
-
-troubleshooting issues and bugs and etc.
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div class="panel my-5" id="education">
-<div class="education-section">
+<!-- Education -->
+<section class="panel" id="education">
 <div class="section-head">
 <span class="eyebrow" data-fa="/تحصیلات">/education</span>
 <h2 class="section-title" data-fa="تحصیلات">Education</h2>
 </div>
 <div class="timeline">
-<div class="timeline-card timeline-card-success" data-aos="fade-in" data-aos-delay="200">
-<div class="timeline-head px-4 pt-3">
-<div class="h5" data-fa='کارشناسی مهندسی کامپیوتر <span class="text-muted h6">از دانشگاه MUST</span>'>Bachelor of Computer Science <span class="text-muted h6">from MUST</span></div>
-</div>
-<div class="timeline-body px-4 pb-4">
-<div class="text-muted text-small mb-3 code-line" data-fa="مهر ۱۳۹۹ &nbsp;→&nbsp; اکتبر ۲۰۲۰ &nbsp;تا&nbsp; خرداد ۱۴۰۳ &nbsp;→&nbsp; ژوئن ۲۰۲۴">October 2020 - June 2024</div>
-<div data-fa="مهندسی کامپیوتر را در دانشگاه علوم و فناوری مازندران (MUST) خوانده‌ام.">I studied Computer Engineering at Mazandaran University of Science and Technology (MUST).</div>
-<ul class="mt-2 mb-0 ps-3">
+<article class="tl-item tl-item-success">
+<h3 class="tl-title" data-fa='کارشناسی مهندسی کامپیوتر <span class="tl-org">از دانشگاه MUST</span>'>Bachelor of Computer Science <span class="tl-org">from MUST</span></h3>
+<p class="tl-date" data-fa="مهر ۱۳۹۹ تا خرداد ۱۴۰۳">October 2020 - June 2024</p>
+<p class="tl-text" data-fa="مهندسی کامپیوتر را در دانشگاه علوم و فناوری مازندران (MUST) خوانده‌ام.">I studied Computer Engineering at Mazandaran University of Science and Technology (MUST).</p>
+<ul class="tl-list">
 <li data-fa="نفر دوم مهندسی کامپیوتر">Ranked 2nd in the Computer Engineering program</li>
 <li data-fa="برگزار کننده سمینار هوش مصنوعی">Organized an AI seminar</li>
 </ul>
+</article>
 </div>
-</div>
-</div>
-</div>
-</div>
+</section>
 
-<div class="panel my-5 d-print-none" id="projects">
+<!-- Projects -->
+<section class="panel d-print-none" id="projects">
 <div class="section-head">
 <span class="eyebrow" data-fa="/پروژه‌ها">/projects</span>
 <h2 class="section-title" data-fa="پروژه‌ها">Projects</h2>
 </div>
-<div id="portfolio-section">
+<div class="projects-grid">
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="0">
+<article class="project-card">
 <div class="project-media">
-<div id="carouselAccounting" class="carousel slide" data-bs-ride="false">
+<div id="carouselAccounting" class="carousel slide">
 <div class="carousel-inner">
-<div class="carousel-item active">
-<a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide1Modal">
-<img src="images/accounting-app-1.png" alt="Accounting App slide 1">
-</a>
+<div class="carousel-item active"><a href="images/accounting-app-1.png" data-bs-toggle="modal" data-bs-target="#lightbox"><img src="images/accounting-app-1.png" alt="Accounting App slide 1" loading="lazy"></a></div>
+<div class="carousel-item"><a href="images/accounting-app-2.png" data-bs-toggle="modal" data-bs-target="#lightbox"><img src="images/accounting-app-2.png" alt="Accounting App slide 2" loading="lazy"></a></div>
+<div class="carousel-item"><a href="images/accounting-app-3.png" data-bs-toggle="modal" data-bs-target="#lightbox"><img src="images/accounting-app-3.png" alt="Accounting App slide 3" loading="lazy"></a></div>
 </div>
-<div class="carousel-item">
-<a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide2Modal">
-<img src="images/accounting-app-2.png" alt="Accounting App slide 2">
-</a>
-</div>
-<div class="carousel-item">
-<a href="#" data-bs-toggle="modal" data-bs-target="#accountingSlide3Modal">
-<img src="images/accounting-app-3.png" alt="Accounting App slide 3">
-</a>
-</div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselAccounting"
-data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselAccounting"
-data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Next</span>
-</button>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselAccounting" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselAccounting" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
 </div>
 <div class="project-body">
 <p class="project-tag" data-fa="پروژه جنگو">Django Project</p>
 <h3 data-fa="اپلیکیشن وب حسابداری شخصی">Personal Accounting Web Application</h3>
-<p data-fa="یک اپلیکیشن وب حسابداری مبتنی بر جنگو برای مدیریت تراکنش‌ها، هزینه‌ها، درآمدها و گزارش‌های مالی.">A Django-based web accounting application for managing transactions, expenses, income, and financial
-
-reporting.</p>
+<p data-fa="یک اپلیکیشن وب حسابداری مبتنی بر جنگو برای مدیریت تراکنش‌ها، هزینه‌ها، درآمدها و گزارش‌های مالی.">A Django-based web accounting application for managing transactions, expenses, income, and financial reporting.</p>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="0">
-<a class="project-media" href="https://blackcut.pythonanywhere.com/" target="_blank">
-<img src="images/django-barbershop/django-barbershop.jpg" alt="Django Reservation System">
+<article class="project-card">
+<a class="project-media" href="https://blackcut.pythonanywhere.com/" target="_blank" rel="noopener">
+<img src="images/django-barbershop/django-barbershop.jpg" alt="Django Reservation System" loading="lazy">
 </a>
 <div class="project-body">
 <p class="project-tag" data-fa="پروژه جنگو">Django Project</p>
 <h3 data-fa="سیستم رزرواسیون جنگو">Django Reservation System</h3>
 <p data-fa="این وب‌سایت با بک‌اند جنگو توسعه یافته و متناسب با نیازهای خاص یک مشتری طراحی شده است.">This website uses Django as backend and was developed to fit a customer's specific requirements.</p>
-<a class="project-link" href="https://blackcut.pythonanywhere.com/" target="_blank" data-fa="مشاهده پروژه ←">visit project →</a>
+<a class="project-link" href="https://blackcut.pythonanywhere.com/" target="_blank" rel="noopener" data-fa="مشاهده پروژه ←">visit project →</a>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="50">
+<article class="project-card">
 <div class="project-media">
-<video controls>
-<source src="videos/flutter-barbershop.mp4" type="video/mp4">
-</video>
+<video controls playsinline preload="metadata"><source src="videos/flutter-barbershop.mp4" type="video/mp4"></video>
 </div>
 <div class="project-body">
 <p class="project-tag" data-fa="اپلیکیشن فلاتر">Flutter Application</p>
 <h3 data-fa="اپلیکیشن فلاتر برای آرایشگاه">Flutter Application for Barbershop</h3>
-<p data-fa="اپلیکیشن اندروید/iOS برای مدیریت نوبت‌دهی آرایشگاه که با استفاده از یک REST API داده‌ها را دریافت و مدیریت می‌کند.">Android/iOS application for managing barbershop reservations, using a REST API to fetch and
-
-manipulate data.</p>
+<p data-fa="اپلیکیشن اندروید/iOS برای مدیریت نوبت‌دهی آرایشگاه که با استفاده از یک REST API داده‌ها را دریافت و مدیریت می‌کند.">Android/iOS application for managing barbershop reservations, using a REST API to fetch and manipulate data.</p>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="0">
-<a class="project-media" href="https://ntrweb.pythonanywhere.com/" target="_blank">
-<img src="images/project-1.jpg" alt="ToDoList and Notes App">
+<article class="project-card">
+<a class="project-media" href="https://ntrweb.pythonanywhere.com/" target="_blank" rel="noopener">
+<img src="images/project-1.jpg" alt="ToDoList and Notes App" loading="lazy">
 </a>
 <div class="project-body">
 <p class="project-tag" data-fa="پروژه جنگو">Django Project</p>
 <h3 data-fa="اپلیکیشن یادداشت و لیست کارها">ToDoList and Notes App</h3>
-<p data-fa="یک پلتفرم پرسرعت مدیریت کارها با جنگو و رابط کاربری بوت‌استرپ که به‌صورت زنده و آنلاین برای مدیریت کارهای روزانه در دسترس است.">A high-performance to-do list platform built with Django and a Bootstrap frontend. Deployed and live
-
-for managing daily tasks.</p>
-<a class="project-link" href="https://ntrweb.pythonanywhere.com/" target="_blank" data-fa="مشاهده پروژه ←">visit project →</a>
+<p data-fa="یک پلتفرم پرسرعت مدیریت کارها با جنگو و رابط کاربری بوت‌استرپ که به‌صورت زنده و آنلاین برای مدیریت کارهای روزانه در دسترس است.">A high-performance to-do list platform built with Django and a Bootstrap frontend. Deployed and live for managing daily tasks.</p>
+<a class="project-link" href="https://ntrweb.pythonanywhere.com/" target="_blank" rel="noopener" data-fa="مشاهده پروژه ←">visit project →</a>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="50">
-<div class="project-media"><img src="images/project-2.jpg" alt="HR Management Software"></div>
+<article class="project-card">
+<div class="project-media"><img src="images/project-2.jpg" alt="HR Management Software" loading="lazy"></div>
 <div class="project-body">
 <p class="project-tag" data-fa="اپلیکیشن دسکتاپ پایتون">Python GUI App</p>
 <h3 data-fa="نرم‌افزار مدیریت منابع انسانی">HR Management Software</h3>
 <p data-fa="یک اپلیکیشن دسکتاپ برای انجام عملیات CRUD با استفاده از MySQL به‌عنوان پایگاه‌داده و PyQt برای رابط کاربری.">A desktop application enabling CRUD operations, using MySQL as the DBMS and PyQt for the GUI.</p>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="0">
-<div class="project-media"><img src="images/project-3.jpg" alt="IMDB Web Crawling Software"></div>
+<article class="project-card">
+<div class="project-media"><img src="images/project-3.jpg" alt="IMDB Web Crawling Software" loading="lazy"></div>
 <div class="project-body">
 <p class="project-tag">Python / Kivy / BeautifulSoup</p>
 <h3 data-fa="نرم‌افزار استخراج داده از IMDB">IMDB Web Crawling Software</h3>
-<p data-fa="یک پروژه وب‌اسکرپینگ با استفاده از BeautifulSoup و رابط کاربری Kivy برای استخراج و نمایش داده‌ها از IMDB.">A web scraping project using BeautifulSoup, with a Kivy GUI to extract and visualize data from IMDB.
-
-</p>
+<p data-fa="یک پروژه وب‌اسکرپینگ با استفاده از BeautifulSoup و رابط کاربری Kivy برای استخراج و نمایش داده‌ها از IMDB.">A web scraping project using BeautifulSoup, with a Kivy GUI to extract and visualize data from IMDB.</p>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="50">
+<article class="project-card">
 <div class="project-media">
-<div id="carouselLibrary" class="carousel slide" data-bs-ride="false">
+<div id="carouselLibrary" class="carousel slide">
 <div class="carousel-inner">
-<div class="carousel-item active">
-<a href="#" data-bs-toggle="modal" data-bs-target="#slide1Modal"><img
-src="images/LibraryManagement1.png" alt="Library Management slide 1"></a>
+<div class="carousel-item active"><a href="images/LibraryManagement1.png" data-bs-toggle="modal" data-bs-target="#lightbox"><img src="images/LibraryManagement1.png" alt="Library Management slide 1" loading="lazy"></a></div>
+<div class="carousel-item"><a href="images/LibraryManagement2.png" data-bs-toggle="modal" data-bs-target="#lightbox"><img src="images/LibraryManagement2.png" alt="Library Management slide 2" loading="lazy"></a></div>
+<div class="carousel-item"><a href="images/LibraryManagement3.png" data-bs-toggle="modal" data-bs-target="#lightbox"><img src="images/LibraryManagement3.png" alt="Library Management slide 3" loading="lazy"></a></div>
+<div class="carousel-item"><a href="images/LibraryManagement4.png" data-bs-toggle="modal" data-bs-target="#lightbox"><img src="images/LibraryManagement4.png" alt="Library Management slide 4" loading="lazy"></a></div>
 </div>
-<div class="carousel-item">
-<a href="#" data-bs-toggle="modal" data-bs-target="#slide2Modal"><img
-src="images/LibraryManagement2.png" alt="Library Management slide 2"></a>
-</div>
-<div class="carousel-item">
-<a href="#" data-bs-toggle="modal" data-bs-target="#slide3Modal"><img
-src="images/LibraryManagement3.png" alt="Library Management slide 3"></a>
-</div>
-<div class="carousel-item">
-<a href="#" data-bs-toggle="modal" data-bs-target="#slide4Modal"><img
-src="images/LibraryManagement4.png" alt="Library Management slide 4"></a>
-</div>
-</div>
-<button class="carousel-control-prev" type="button" data-bs-target="#carouselLibrary"
-data-bs-slide="prev">
-<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Previous</span>
-</button>
-<button class="carousel-control-next" type="button" data-bs-target="#carouselLibrary"
-data-bs-slide="next">
-<span class="carousel-control-next-icon" aria-hidden="true"></span>
-<span class="visually-hidden">Next</span>
-</button>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselLibrary" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselLibrary" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
 </div>
 <div class="project-body">
 <p class="project-tag">C# / WPF / .NET / SQL Server</p>
 <h3 data-fa="اپلیکیشن مدیریت کتابخانه">Library Management App</h3>
-<p data-fa="یک اپلیکیشن دسکتاپ برای مدیریت کتابخانه، ساخته‌شده با سی‌شارپ (C#)، WPF، دات‌نت فریم‌ورک و SQL Server.">A desktop application for managing a library, built with C#, WPF, the .NET Framework and SQL Server.
-
-</p>
+<p data-fa="یک اپلیکیشن دسکتاپ برای مدیریت کتابخانه، ساخته‌شده با سی‌شارپ (C#)، WPF، دات‌نت فریم‌ورک و SQL Server.">A desktop application for managing a library, built with C#, WPF, the .NET Framework and SQL Server.</p>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="0">
-<div class="project-media"><img src="images/Instagramprofiledownloader.jpg"
-alt="Instagram Profile Picture Downloader"></div>
+<article class="project-card">
+<div class="project-media"><img src="images/Instagramprofiledownloader.jpg" alt="Instagram Profile Picture Downloader" loading="lazy"></div>
 <div class="project-body">
 <p class="project-tag">Python / Qt</p>
 <h3 data-fa="دانلودر عکس پروفایل اینستاگرام">Instagram Profile Picture Downloader</h3>
 <p data-fa="اطلاعات پروفایل را از اینستاگرام دریافت کرده و امکان دانلود مستقیم عکس پروفایل را فراهم می‌کند.">Fetches profile data from Instagram and lets the user download profile pictures directly.</p>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="50">
-<div class="project-media"><img src="images/currencyChecker.jpg" alt="Currency Checker Software"></div>
+<article class="project-card">
+<div class="project-media"><img src="images/currencyChecker.jpg" alt="Currency Checker Software" loading="lazy"></div>
 <div class="project-body">
 <p class="project-tag">Python / Qt / Selenium</p>
 <h3 data-fa="نرم‌افزار بررسی نرخ ارز">Currency Checker Software</h3>
-<p data-fa="یک اپلیکیشن دسکتاپ سبک که نرخ لحظه‌ای دلار را دریافت کرده و در یک رابط کاربری ساده نمایش می‌دهد.">A lightweight desktop app that fetches the latest USD exchange rate in real time and displays it in a
-
-simple GUI.</p>
+<p data-fa="یک اپلیکیشن دسکتاپ سبک که نرخ لحظه‌ای دلار را دریافت کرده و در یک رابط کاربری ساده نمایش می‌دهد.">A lightweight desktop app that fetches the latest USD exchange rate in real time and displays it in a simple GUI.</p>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="0">
-<div class="project-media"><img src="images/IconConvertor.jpg" alt="Icon Convertor"></div>
+<article class="project-card">
+<div class="project-media"><img src="images/IconConvertor.jpg" alt="Icon Convertor" loading="lazy"></div>
 <div class="project-body">
 <p class="project-tag">Python / Qt</p>
 <h3 data-fa="مبدل آیکون">Icon Convertor</h3>
 <p data-fa="یک ابزار دسکتاپ برای تبدیل فرمت‌های رایج تصویر به فرمت آیکون ICO با رابط کاربری ساده.">A desktop tool that converts common image formats to ICO icon format through an easy-to-use GUI.</p>
 </div>
-</div>
+</article>
 
-<div class="project-card" data-aos="fade-up" data-aos-delay="50">
-<div class="project-media"><img src="images/NotroDNS.jpg" alt="DNS Changer"></div>
+<article class="project-card">
+<div class="project-media"><img src="images/NotroDNS.jpg" alt="DNS Changer" loading="lazy"></div>
 <div class="project-body">
 <p class="project-tag">C# / .NET / WPF / Django / DRF</p>
 <h3 data-fa="تغییردهنده DNS">DNS Changer</h3>
-<p data-fa="یک اپلیکیشن ویندوزی مبتنی بر WPF که تنظیمات DNS را از یک Django REST API دریافت کرده و در تنظیمات شبکه سیستم اعمال می‌کند.">A Windows WPF app that retrieves DNS configurations from a Django REST API and applies them to the
-
-system's network settings.</p>
+<p data-fa="یک اپلیکیشن ویندوزی مبتنی بر WPF که تنظیمات DNS را از یک Django REST API دریافت کرده و در تنظیمات شبکه سیستم اعمال می‌کند.">A Windows WPF app that retrieves DNS configurations from a Django REST API and applies them to the system's network settings.</p>
 </div>
-</div>
+</article>
 
 </div>
-</div>
+</section>
 
-<div class="panel my-5" id="military">
+<!-- Military -->
+<section class="panel" id="military">
 <div class="section-head">
 <span class="eyebrow" data-fa="/خدمت سربازی">/military</span>
 <h2 class="section-title" data-fa="خدمت اجباری سربازی">Military Service</h2>
 </div>
 <div class="timeline">
-<div class="timeline-card timeline-card-info" data-aos="fade-in" data-aos-delay="0">
-<div class="timeline-head px-4 pt-3">
-<div class="h5" data-fa="خدمت اجباری سربازی">Mandatory Military Service</div>
+<article class="tl-item">
+<h3 class="tl-title" data-fa="خدمت اجباری سربازی">Mandatory Military Service</h3>
+<p class="tl-date" data-fa="۱۴۰۳ - ۱۴۰۵">2024 - 2026</p>
+<p class="tl-text" data-fa="خدمت در نیروی دریایی ارتش.">Served in the Navy of the Iranian Army.</p>
+</article>
 </div>
-<div class="timeline-body px-4 pb-4">
-<div class="text-muted text-small mb-3" data-fa="۱۴۰۳ - ۱۴۰۵">2024 - 2026</div>
-<div data-fa="خدمت در نیروی دریایی ارتش.">Served in the Navy of the Iranian Army.</div>
-</div>
-</div>
-</div>
-</div>
+</section>
 
-<div class="panel my-5" id="certificates">
+<!-- Certificates -->
+<section class="panel" id="certificates">
 <div class="section-head">
 <span class="eyebrow" data-fa="/گواهینامه‌ها">/certificates</span>
 <h2 class="section-title" data-fa="گواهینامه‌ها و مجوزها">Certificates &amp; Licenses</h2>
 </div>
 <div class="cert-grid">
-<div class="cert-card">
-<div class="cert-card-head">
-<i class="fas fa-certificate"></i>
+<article class="cert-card">
+<div class="cert-head">
+<i class="fas fa-certificate" aria-hidden="true"></i>
 <div>
 <h3>5 Real-Time Use Cases using Machine Learning</h3>
 <div class="cert-meta">Udemy &middot; 08/05/2023</div>
 </div>
 </div>
-<img src="images/certificates/Udemy - 5 Real-Time Use Cases using Machine Learning.jpg"
-alt="Machine Learning certificate">
-</div>
-<div class="cert-card">
-<div class="cert-card-head">
-<i class="fas fa-certificate"></i>
+<img src="images/certificates/Udemy - 5 Real-Time Use Cases using Machine Learning.jpg" alt="Machine Learning certificate" loading="lazy">
+</article>
+<article class="cert-card">
+<div class="cert-head">
+<i class="fas fa-certificate" aria-hidden="true"></i>
 <div>
 <h3 data-fa="سمینار علم داده و تأثیرات هوش مصنوعی">Seminar on Data Science &amp; AI Influences</h3>
 <div class="cert-meta">2023</div>
 </div>
 </div>
-<img src="images/certificates/1701698567424.jpg" alt="Seminar certificate">
+<img src="images/certificates/1701698567424.jpg" alt="Seminar certificate" loading="lazy">
+</article>
 </div>
-</div>
-</div>
+</section>
 
-<div class="panel my-5" id="contact">
-<div class="contant-section">
+<!-- Contact -->
+<section class="panel" id="contact">
 <div class="section-head">
 <span class="eyebrow" data-fa="/تماس">/contact</span>
 <h2 class="section-title" data-fa="تماس با من">Contact</h2>
 </div>
-<div class="row g-4">
-<div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
-<div class="contact-info-row"><i class="fas fa-phone"></i> +989382701160 (WhatsApp, Telegram)</div>
-<div class="contact-info-row"><i class="far fa-envelope"></i> bardianikbakhsh@gmail.com</div>
-<div class="mt-4 d-print-none">
-<a class="btn btn-info" href="mailto:Bardianikbakhsh@gmail.com" target="_blank" rel="noopener"
-data-fa='<i class="far fa-paper-plane"></i>&nbsp; ایمیل بزنید'>
-<i class="far fa-paper-plane"></i>&nbsp; Send an Email
+<div class="contact-grid">
+<div class="contact-info">
+<div class="contact-row"><i class="fas fa-phone" aria-hidden="true"></i><span><bdi dir="ltr">+989382701160</bdi> (WhatsApp, Telegram)</span></div>
+<div class="contact-row"><i class="far fa-envelope" aria-hidden="true"></i><span>bardianikbakhsh@gmail.com</span></div>
+<a class="btn btn-accent mt-4 d-print-none" href="mailto:Bardianikbakhsh@gmail.com">
+<i class="far fa-paper-plane" aria-hidden="true"></i>&nbsp; <span data-fa="ایمیل بزنید">Send an Email</span>
 </a>
 </div>
-</div>
-<div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
 <div class="status-panel">
-<div class="status-line code-line" data-fa='<span class="status-dot"></span> status --check &nbsp;→&nbsp; آماده همکاری'><span class="status-dot"></span> status --check &nbsp;→&nbsp; open to work
-</div>
-<p data-fa="در حال حاضر به‌عنوان توسعه‌دهنده پایتون/جنگو فعالیت می‌کنم و برای همکاری فریلنس یا تمام‌وقت در زمینه بک‌اند، یادگیری ماشین و فلاتر آماده‌ام. از طریق ایمیل یا در گیت‌هاب با من در تماس باشید.">Working as a Python/Django developer and open to freelance or full-time backend, ML and Flutter work.
-
-Reach out by email or find me on GitHub.</p>
-<div class="status-social">
-<a href="https://github.com/bardianz" title="Github"><i class="fab fa-github"></i></a>
-<a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
-<a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-<footer class="site-footer pt-4 pb-4 text-center d-print-none">
-<div class="container">
-<div class="my-3">
-<div class="h4" data-fa="بردیا نیک بخش">Bardia Nikbakhsh</div>
-<div class="footer-nav">
-<nav role="navigation">
-<ul class="nav justify-content-center">
-<li class="nav-item"><a class="nav-link" href="#" title="Twitter"><i class="fab fa-twitter"></i><span
-class="menu-title sr-only">Twitter</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#" title="Facebook"><i class="fab fa-facebook"></i><span
-class="menu-title sr-only">Facebook</span></a></li>
-<li class="nav-item"><a class="nav-link" href="#" title="Instagram"><i class="fab fa-instagram"></i><span
-class="menu-title sr-only">Instagram</span></a></li>
-<li class="nav-item"><a class="nav-link" href="https://github.com/bardianz" title="Github"><i
-class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a></li>
+<div class="status-line code-line"><span class="status-dot"></span><span data-fa="status --check → آماده همکاری">status --check → open to work</span></div>
+<p data-fa="در حال حاضر به‌عنوان توسعه‌دهنده پایتون/جنگو فعالیت می‌کنم و برای همکاری فریلنس یا تمام‌وقت در زمینه بک‌اند، یادگیری ماشین و فلاتر آماده‌ام. از طریق ایمیل یا در گیت‌هاب با من در تماس باشید.">Working as a Python/Django developer and open to freelance or full-time backend, ML and Flutter work. Reach out by email or find me on GitHub.</p>
+<ul class="social-links social-links-sm">
+<li><a href="https://github.com/bardianz" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+<li><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+<li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
 </ul>
-</nav>
 </div>
 </div>
-<div class="text-small">
-<div>Design - <a href="https://notroweb.ir/" target="_blank">Notroweb</a></div>
-</div>
+</section>
+
+</main>
+
+<!-- ============================== Footer ============================== -->
+<footer class="site-footer d-print-none">
+<div class="container">
+<div class="footer-name" data-fa="بردیا نیک بخش">Bardia Nikbakhsh</div>
+<ul class="social-links">
+<li><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+<li><a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+<li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+<li><a href="https://github.com/bardianz" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a></li>
+</ul>
+<div class="footer-credit">Design - <a href="https://notroweb.ir/" target="_blank" rel="noopener">Notroweb</a></div>
 </div>
 </footer>
 
-<script src="scripts/aos.js?ver=2.0.0"></script>
-<script src="scripts/main.js?ver=2.0.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-crossorigin="anonymous"></script>
+<!-- Shared image lightbox (filled from the clicked thumbnail) -->
+<div class="modal fade" id="lightbox" tabindex="-1" aria-label="Image preview" aria-hidden="true">
+<div class="modal-dialog modal-xl modal-dialog-centered">
+<div class="modal-content">
+<button type="button" class="btn-close lightbox-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<img id="lightboxImg" class="img-fluid" alt="">
+</div>
+</div>
+</div>
 
-<!-- ===================== Added: language toggle logic ===================== -->
-<script>
-(function () {
-  var STORAGE_KEY = 'site-lang';
-  var htmlEl = document.documentElement;
-  var toggleBtn = document.getElementById('langToggle');
-  var toggleLabel = toggleBtn ? toggleBtn.querySelector('.lang-toggle-text') : null;
-
-  function applyLang(lang) {
-    var nodes = document.querySelectorAll('[data-fa]');
-    nodes.forEach(function (el) {
-      if (!el.hasAttribute('data-en')) {
-        el.setAttribute('data-en', el.innerHTML.trim());
-      }
-      el.innerHTML = lang === 'fa' ? el.getAttribute('data-fa') : el.getAttribute('data-en');
-    });
-
-    if (lang === 'fa') {
-      htmlEl.setAttribute('lang', 'fa');
-      htmlEl.setAttribute('dir', 'rtl');
-    } else {
-      htmlEl.setAttribute('lang', 'en-US');
-      htmlEl.setAttribute('dir', 'ltr');
-    }
-    if (toggleLabel) toggleLabel.textContent = lang === 'fa' ? 'EN' : 'FA';
-    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
-  }
-
-  var saved = 'en';
-  try { saved = localStorage.getItem(STORAGE_KEY) || 'en'; } catch (e) {}
-  applyLang(saved);
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', function () {
-      var current = htmlEl.getAttribute('dir') === 'rtl' ? 'fa' : 'en';
-      applyLang(current === 'fa' ? 'en' : 'fa');
-    });
-  }
-})();
-</script>
+<script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script defer src="scripts/main.js?ver=3.0.0"></script>
 </body>
 
 </html>

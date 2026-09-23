@@ -272,7 +272,7 @@ a:focus-visible, button:focus-visible {
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(11, 20, 32, 0.8) 0%, rgba(11, 20, 32, 0.95) 70%, var(--ink) 100%),
-    url("../images/header-background.jpg") center / cover no-repeat,
+    url("../images/header-background.webp") center / cover no-repeat,
     var(--ink);
 }
 

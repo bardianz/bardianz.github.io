@@ -1,0 +1,42 @@
+/* Tech stack badges inside project cards */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.85rem;
+  direction: ltr;
+}
+
+.tech {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  min-width: 28px;
+  padding: 0 0.35rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.tech:hover { border-color: var(--accent); transform: translateY(-1px); }
+
+.tech img { width: 16px; height: 16px; display: block; }
+
+.tech-text {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 575px) {
+  .tech-stack { gap: 0.3rem; padding-top: 0.7rem; }
+  .tech { height: 26px; min-width: 26px; border-radius: 7px; }
+  .tech img { width: 15px; height: 15px; }
+}
+
+@media print { .tech-stack { display: none; } }

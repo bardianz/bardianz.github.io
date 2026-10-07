@@ -1,0 +1,20 @@
+name: Package full site ZIP
+
+on:
+  push:
+    branches:
+      - seo-multilingual-fa
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create ZIP
+        run: |
+          zip -r /tmp/bardianz.github.io-seo-fixed.zip . -x ".git/*" ".github/*" "_package-trigger.txt"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bardianz.github.io-seo-fixed
+          path: /tmp/bardianz.github.io-seo-fixed.zip
+          retention-days: 7

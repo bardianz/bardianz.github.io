@@ -42,44 +42,52 @@
 @media print { .tech-stack { display: none; } }
 
 
-/* Brand logos in the Skills section only; preserve the existing chip layout. */
+/* Skills brand logos: keep their original, vivid colors and remove chip effects. */
 #skills .skill-chip > i.skill-brand-icon,
 #skills .skill-chip > .skill-brand-pair .skill-brand-icon {
   width: auto;
   height: auto;
-  background: transparent;
-  border-radius: 0;
-  color: inherit;
-}
-
-/* Keep official brand colors vivid instead of applying the generic icon tint. */
-#skills .skill-chip .devicon-python-plain.colored { color: #3776AB; }
-#skills .skill-chip .devicon-git-plain.colored { color: #F05032; }
-#skills .skill-chip .devicon-postgresql-plain.colored { color: #4169E1; }
-#skills .skill-chip .devicon-mysql-plain.colored { color: #4479A1; }
-#skills .skill-chip .devicon-docker-plain.colored { color: #2496ED; }
-#skills .skill-chip .devicon-mongodb-plain.colored { color: #47A248; }
-#skills .skill-chip .devicon-redis-plain.colored { color: #DC382D; }
-#skills .skill-chip .devicon-flutter-plain.colored { color: #02569B; }
-
-#skills .skill-chip > .skill-brand-icon,
-#skills .skill-chip > .skill-brand-pair {
   flex: 0 0 auto;
+  padding: 0;
+  background: transparent !important;
+  border-radius: 0;
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal;
+  text-shadow: none;
+  line-height: 1;
 }
 
 #skills .skill-chip > .skill-brand-icon {
-  font-size: 1.25rem;
-  line-height: 1;
+  font-size: 1.4rem;
 }
 
 #skills .skill-brand-pair {
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   line-height: 1;
 }
 
 #skills .skill-brand-pair .skill-brand-icon {
   font-size: inherit;
 }
+
+/* Explicit brand colors, independent of the library's .colored helper class. */
+#skills .skill-chip .devicon-python-plain,
+#skills .skill-chip .devicon-python-plain.colored { color: #3776AB !important; }
+#skills .skill-chip .devicon-git-plain,
+#skills .skill-chip .devicon-git-plain.colored { color: #F05032 !important; }
+#skills .skill-chip .devicon-postgresql-plain,
+#skills .skill-chip .devicon-postgresql-plain.colored { color: #4169E1 !important; }
+#skills .skill-chip .devicon-mysql-plain,
+#skills .skill-chip .devicon-mysql-plain.colored { color: #4479A1 !important; }
+#skills .skill-chip .devicon-docker-plain,
+#skills .skill-chip .devicon-docker-plain.colored { color: #2496ED !important; }
+#skills .skill-chip .devicon-mongodb-plain,
+#skills .skill-chip .devicon-mongodb-plain.colored { color: #47A248 !important; }
+#skills .skill-chip .devicon-redis-plain,
+#skills .skill-chip .devicon-redis-plain.colored { color: #DC382D !important; }
+#skills .skill-chip .devicon-flutter-plain,
+#skills .skill-chip .devicon-flutter-plain.colored { color: #02569B !important; }

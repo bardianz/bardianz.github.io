@@ -1,42 +1,143 @@
-/* Tech stack badges inside project cards */
+/* Shared, data-driven technology icons for skills and project stacks. */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0.45rem;
   margin-top: auto;
-  padding-top: 0.85rem;
+  padding-top: 0.9rem;
   direction: ltr;
 }
 
-.tech {
+.tech,
+.skill-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 28px;
-  min-width: 28px;
-  padding: 0 0.35rem;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  transition: border-color 0.15s ease, transform 0.15s ease;
-}
-
-.tech:hover { border-color: var(--accent); transform: translateY(-1px); }
-
-.tech img { width: 16px; height: 16px; display: block; }
-
-.tech-text {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  font-weight: 600;
+  flex: 0 0 auto;
   color: var(--text-muted);
-  letter-spacing: 0.02em;
+  background: linear-gradient(145deg, #fff, #f4f6f9);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 2px rgba(11, 20, 32, 0.05);
 }
+
+.tech {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.tech:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-2);
+  box-shadow: 0 5px 12px rgba(11, 20, 32, 0.1);
+}
+
+.tech-logo {
+  display: block;
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.tech-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  max-width: 29px;
+  height: 20px;
+  padding: 0 2px;
+  overflow: hidden;
+  color: #38506a;
+  font: 700 0.58rem/1 var(--font-mono);
+  letter-spacing: -0.04em;
+}
+
+.skill-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skill-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+.skill-icon .tech-logo {
+  width: 23px;
+  height: 23px;
+}
+
+.skill-icon .tech-fallback {
+  max-width: 30px;
+  font-size: 0.62rem;
+}
+
+.project-more {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 0.55rem;
+  margin-top: 0.45rem;
+  padding: 0.45rem 0.75rem;
+  border: 1px solid rgba(43, 179, 163, 0.35);
+  border-radius: 9px;
+  background: rgba(43, 179, 163, 0.08);
+  color: var(--accent-2);
+  font: 600 0.82rem/1.4 var(--font-body);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.project-more:hover {
+  background: rgba(43, 179, 163, 0.14);
+  border-color: var(--accent-2);
+  transform: translateY(-1px);
+}
+
+.project-more-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: rgba(43, 179, 163, 0.13);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.project-details[hidden] { display: none !important; }
+
+.project-feature-list {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0.25rem 0 0.5rem;
+  padding-inline-start: 1.25rem;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.project-feature-list li { padding-inline-start: 0.15rem; }
+.project-feature-list li::marker { color: var(--accent-2); }
 
 @media (max-width: 575px) {
-  .tech-stack { gap: 0.3rem; padding-top: 0.7rem; }
-  .tech { height: 26px; min-width: 26px; border-radius: 7px; }
-  .tech img { width: 15px; height: 15px; }
+  .tech-stack { gap: 0.35rem; padding-top: 0.75rem; }
+  .tech { width: 31px; height: 31px; border-radius: 9px; }
+  .tech-logo { width: 19px; height: 19px; }
+  .skill-icon { width: 33px; height: 33px; }
+  .skill-icon .tech-logo { width: 21px; height: 21px; }
 }
 
-@media print { .tech-stack { display: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .tech, .project-more { transition: none; }
+}
+
+@media print {
+  .tech-stack, .project-more { display: none !important; }
+  .project-details[hidden] { display: block !important; }
+}

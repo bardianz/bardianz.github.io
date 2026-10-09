@@ -22,7 +22,7 @@
     dotnet:     { label: '.NET', src: DEVICON + 'dot-net/dot-net-original.svg' },
     sqlserver:  { label: 'SQL Server', src: DEVICON + 'microsoftsqlserver/microsoftsqlserver-plain.svg' },
     ml:         { label: 'Machine Learning', src: DEVICON + 'scikitlearn/scikitlearn-original.svg' },
-    celery:     { label: 'Celery', src: SIMPLE_ICONS + 'celery/37814A' },
+    celery:     { label: 'Celery', src: SIMPLE_ICONS + 'celery/37814A', text: 'Ce' },
     channels:   { label: 'Django Channels', text: 'CH' },
     websocket:  { label: 'WebSocket', text: 'WS' },
     drf:        { label: 'Django REST Framework', text: 'DRF' },

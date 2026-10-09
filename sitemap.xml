@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bardian.ir/</loc>
-    <lastmod>2026-09-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bardian.ir/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bardian.ir/fa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bardian.ir/"/>
+  </url>
+  <url>
+    <loc>https://bardian.ir/fa/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://bardian.ir/"/>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://bardian.ir/fa/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bardian.ir/"/>
   </url>
 </urlset>

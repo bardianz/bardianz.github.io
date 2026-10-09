@@ -40,3 +40,27 @@
 }
 
 @media print { .tech-stack { display: none; } }
+
+
+/* Brand logos in the Skills section only; preserve the existing chip layout. */
+#skills .skill-chip > .skill-brand-icon,
+#skills .skill-chip > .skill-brand-pair {
+  flex: 0 0 auto;
+}
+
+#skills .skill-chip > .skill-brand-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+#skills .skill-brand-pair {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+#skills .skill-brand-pair .skill-brand-icon {
+  font-size: inherit;
+}

@@ -79,6 +79,8 @@
 
 .project-more {
   display: inline-flex;
+  visibility: visible;
+  opacity: 1;
   align-items: center;
   align-self: flex-start;
   gap: 0.55rem;
@@ -110,6 +112,7 @@
   line-height: 1;
 }
 
+.project-details { width: 100%; margin-top: 0.1rem; }
 .project-details[hidden] { display: none !important; }
 
 .project-feature-list {

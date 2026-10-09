@@ -18,6 +18,7 @@
     root.lang = fa ? 'fa' : 'en';
     root.dir = fa ? 'rtl' : 'ltr';
     langLabel.textContent = fa ? 'EN' : 'FA';
+    document.dispatchEvent(new CustomEvent('site:languagechange', { detail: { lang } }));
     try { localStorage.setItem(KEY, lang); } catch (_) { /* storage unavailable */ }
   };
 

@@ -11,7 +11,6 @@
     bootstrap:  { label: 'Bootstrap', src: DEVICON + 'bootstrap/bootstrap-original.svg' },
     qt:         { label: 'Qt / PyQt', src: DEVICON + 'qt/qt-original.svg' },
     mysql:      { label: 'MySQL', src: DEVICON + 'mysql/mysql-original.svg' },
-    postgresql: { label: 'PostgreSQL', src: DEVICON + 'postgresql/postgresql-original.svg' },
     mongodb:    { label: 'MongoDB', src: DEVICON + 'mongodb/mongodb-original.svg' },
     redis:      { label: 'Redis', src: DEVICON + 'redis/redis-original.svg' },
     docker:     { label: 'Docker', src: DEVICON + 'docker/docker-original.svg' },
@@ -81,7 +80,9 @@
     card.getAttribute('data-stack').split(',').forEach(function (rawKey) {
       const key = rawKey.trim().toLowerCase();
       const tech = TECH[key];
-      if (!tech || seen.has(key)) return;
+      // Project stacks show only the same colorful logo assets used by Skills.
+      // Avoid text-only badges for technologies without a recognizable logo.
+      if (!tech || !tech.src || seen.has(key)) return;
       seen.add(key);
 
       const item = document.createElement('span');

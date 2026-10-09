@@ -91,3 +91,18 @@
 #skills .skill-chip .devicon-redis-plain.colored { color: #DC382D !important; }
 #skills .skill-chip .devicon-flutter-plain,
 #skills .skill-chip .devicon-flutter-plain.colored { color: #02569B !important; }
+
+/* Full-color SVG logos in the Skills section. */
+#skills .skill-chip > .skill-brand-image {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  object-fit: contain;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  opacity: 1;
+  filter: none;
+}

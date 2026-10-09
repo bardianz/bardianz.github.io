@@ -51,7 +51,7 @@
 integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous">
 <link rel="stylesheet" href="css/main.css?ver=3.0.2">
-<link href="css/tech-stack.css?ver=2.0.0" rel="stylesheet">
+<link href="css/tech-stack.css?ver=3.0.0" rel="stylesheet">
 </head>
 
 <body id="top">
@@ -167,16 +167,16 @@ aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
 <h2 class="section-title" data-fa="مهارت‌های حرفه‌ای">Professional Skills</h2>
 </div>
 <div class="skills-grid">
-<div class="skill-chip"><i class="fab fa-python" aria-hidden="true"></i>Python</div>
-<div class="skill-chip"><i class="fas fa-layer-group" aria-hidden="true"></i>Django</div>
-<div class="skill-chip"><i class="fab fa-linux" aria-hidden="true"></i><span data-fa="سیستم‌عامل لینوکس">Linux OS</span></div>
-<div class="skill-chip"><i class="fas fa-brain" aria-hidden="true"></i><span data-fa="یادگیری ماشین">Machine Learning</span></div>
-<div class="skill-chip"><i class="fas fa-bolt" aria-hidden="true"></i>Celery</div>
-<div class="skill-chip"><i class="fab fa-git-alt" aria-hidden="true"></i>Git</div>
-<div class="skill-chip"><i class="fas fa-database" aria-hidden="true"></i>PostgreSQL, MySQL</div>
-<div class="skill-chip"><i class="fab fa-docker" aria-hidden="true"></i>Docker</div>
-<div class="skill-chip"><i class="fas fa-cubes" aria-hidden="true"></i>MongoDB, Redis</div>
-<div class="skill-chip"><i class="fas fa-mobile-screen-button" aria-hidden="true"></i>Flutter</div>
+<div class="skill-chip" data-tech="python"><span class="skill-label">Python</span></div>
+<div class="skill-chip" data-tech="django"><span class="skill-label">Django</span></div>
+<div class="skill-chip" data-tech="linux"><span class="skill-label" data-fa="سیستم‌عامل لینوکس">Linux OS</span></div>
+<div class="skill-chip" data-tech="ml"><span class="skill-label" data-fa="یادگیری ماشین">Machine Learning</span></div>
+<div class="skill-chip" data-tech="celery"><span class="skill-label">Celery</span></div>
+<div class="skill-chip" data-tech="git"><span class="skill-label">Git</span></div>
+<div class="skill-chip" data-tech="postgresql"><span class="skill-label">PostgreSQL, MySQL</span></div>
+<div class="skill-chip" data-tech="docker"><span class="skill-label">Docker</span></div>
+<div class="skill-chip" data-tech="mongodb"><span class="skill-label">MongoDB, Redis</span></div>
+<div class="skill-chip" data-tech="flutter"><span class="skill-label">Flutter</span></div>
 </div>
 </section>
 
@@ -260,10 +260,25 @@ aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
 <button class="carousel-control-next" type="button" data-bs-target="#carouselBarbershop" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 </div>
 </div>
-<div class="project-body" data-stack="python,django,bootstrap,mysql,drf">
-<p class="project-tag" data-fa="پروژه جنگو">Django Project</p>
-<h3 data-fa="سیستم رزرواسیون جنگو">Django Reservation System</h3>
-<p data-fa="این وب‌سایت با بک‌اند جنگو توسعه یافته و متناسب با نیازهای خاص یک مشتری طراحی شده است.">This website uses Django as backend and was developed to fit a customer's specific requirements.</p>
+<div class="project-body" data-stack="python,django,drf,channels,websocket,redis,bootstrap,mysql,docker">
+<p class="project-tag" data-fa="سامانه وب">Web Platform</p>
+<h3>Blackcut — Salon Booking &amp; E-commerce</h3>
+<p data-fa="بلک‌کات یک سامانه‌ی تحت وب برای نوبت‌دهی آرایشگاه و فروش آنلاین است که پنل مدیریت اختصاصی و اپلیکیشن مدیریت اندرویدی را به هم متصل می‌کند.">Blackcut is a web platform for salon appointments and online shopping, connecting a dedicated admin dashboard with an Android management app.</p>
+<button class="project-more" type="button" aria-expanded="false" aria-controls="blackcut-details">
+<span data-more-label data-fa="نمایش بیشتر">Show more</span><span class="project-more-icon" aria-hidden="true">+</span>
+</button>
+<div class="project-details" id="blackcut-details" hidden>
+<ul class="project-feature-list">
+<li data-fa="پنل مدیریت اختصاصی با به‌روزرسانی زنده‌ی نوبت‌ها از طریق WebSocket و Django Channels">Custom admin dashboard with real-time appointment updates using WebSocket and Django Channels</li>
+<li data-fa="توسعه‌ی API اختصاصی با Django REST Framework برای تبادل اطلاعات بین وب‌سایت و اپلیکیشن مدیریت اندرویدی">Dedicated API built with Django REST Framework to exchange data between the website and the Android management app</li>
+<li data-fa="استقرار و میزبانی وب‌سایت روی VPS با استفاده از Docker و انجام پشتیبانی و نگهداری منظم سامانه">VPS deployment and hosting with Docker, plus regular website maintenance and technical support</li>
+<li data-fa="استفاده از Redis برای مدیریت ارتباطات و پیام‌رسانی بین اجزای سامانه و پشتیبانی از زیرساخت ارتباطات بلادرنگ">Redis for inter-component messaging and support for real-time communication infrastructure</li>
+<li data-fa="طراحی رابط کاربری واکنش‌گرا با Bootstrap برای نمایشگرهای موبایل، تبلت و دسکتاپ">Responsive user interface built with Bootstrap for mobile, tablet, and desktop screens</li>
+<li data-fa="مدیریت پایگاه داده با MySQL و طراحی فرایندهای ثبت و به‌روزرسانی اطلاعات نوبت‌ها، سفارش‌ها و محصولات">MySQL database management and workflows for creating and updating appointment, order, and product records</li>
+<li data-fa="پیاده‌سازی سیستم احراز هویت و کنترل دسترسی برای کاربران و مدیران سامانه">Authentication and access control for customers and administrators</li>
+<li data-fa="پیاده‌سازی فروشگاه اینترنتی با سیستم پرداخت و درگاه پرداخت آنلاین">Online store with an integrated online payment system and payment gateway</li>
+</ul>
+</div>
 <a class="project-link" href="https://blackcut.pythonanywhere.com/" target="_blank" rel="noopener" data-fa="مشاهده پروژه ←">visit project →</a>
 </div>
 </article>
@@ -358,7 +373,7 @@ aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
 
 <article class="project-card">
 <div class="project-media"><img src="images/NotroDNS.webp" alt="DNS Changer" loading="lazy"></div>
-<div class="project-body" data-stack="python,django,csharp,dotnet,wpf,django,drf">
+<div class="project-body" data-stack="csharp,dotnet,wpf,django,drf">
 <p class="project-tag">C# / .NET / WPF / Django / DRF</p>
 <h3 data-fa="تغییردهنده DNS">DNS Changer</h3>
 <p data-fa="یک اپلیکیشن ویندوزی مبتنی بر WPF که تنظیمات DNS را از یک Django REST API دریافت کرده و در تنظیمات شبکه سیستم اعمال می‌کند.">A Windows WPF app that retrieves DNS configurations from a Django REST API and applies them to the system's network settings.</p>
@@ -464,8 +479,8 @@ aria-controls="siteNav" aria-expanded="false" aria-label="Toggle navigation">
 integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
 integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<script defer src="scripts/main.js?ver=3.0.2"></script>
-<script src="scripts/tech-stack.js?ver=2.0.0"></script>
+<script defer src="scripts/main.js?ver=3.0.3"></script>
+<script src="scripts/tech-stack.js?ver=3.0.0"></script>
 </body>
 
 </html>

@@ -43,6 +43,25 @@
 
 
 /* Brand logos in the Skills section only; preserve the existing chip layout. */
+#skills .skill-chip > i.skill-brand-icon,
+#skills .skill-chip > .skill-brand-pair .skill-brand-icon {
+  width: auto;
+  height: auto;
+  background: transparent;
+  border-radius: 0;
+  color: inherit;
+}
+
+/* Keep official brand colors vivid instead of applying the generic icon tint. */
+#skills .skill-chip .devicon-python-plain.colored { color: #3776AB; }
+#skills .skill-chip .devicon-git-plain.colored { color: #F05032; }
+#skills .skill-chip .devicon-postgresql-plain.colored { color: #4169E1; }
+#skills .skill-chip .devicon-mysql-plain.colored { color: #4479A1; }
+#skills .skill-chip .devicon-docker-plain.colored { color: #2496ED; }
+#skills .skill-chip .devicon-mongodb-plain.colored { color: #47A248; }
+#skills .skill-chip .devicon-redis-plain.colored { color: #DC382D; }
+#skills .skill-chip .devicon-flutter-plain.colored { color: #02569B; }
+
 #skills .skill-chip > .skill-brand-icon,
 #skills .skill-chip > .skill-brand-pair {
   flex: 0 0 auto;

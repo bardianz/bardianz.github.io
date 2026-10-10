@@ -34,6 +34,13 @@
   box-shadow: 0 5px 12px rgba(11, 20, 32, 0.1);
 }
 
+.tech-logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-dark);
+  font-size: 1.1rem;
+}
 .tech-logo {
   display: block;
   width: 21px;

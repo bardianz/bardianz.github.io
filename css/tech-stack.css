@@ -69,14 +69,14 @@
 }
 
 .skill-icon {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
 }
 
 .skill-icon .tech-logo {
-  width: 23px;
-  height: 23px;
+  width: 21px;
+  height: 21px;
 }
 
 .skill-icon .tech-fallback {
@@ -138,8 +138,8 @@
   .tech-stack { gap: 0.35rem; padding-top: 0.75rem; }
   .tech { width: 31px; height: 31px; border-radius: 9px; }
   .tech-logo { width: 19px; height: 19px; }
-  .skill-icon { width: 33px; height: 33px; }
-  .skill-icon .tech-logo { width: 21px; height: 21px; }
+  .skill-icon { width: 29px; height: 29px; border-radius: 8px; }
+  .skill-icon .tech-logo { width: 19px; height: 19px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -5,7 +5,9 @@
   const SIMPLE_ICONS = 'https://cdn.simpleicons.org/';
   const TECH = {
     python:     { label: 'Python', src: DEVICON + 'python/python-original.svg' },
-    django:     { label: 'Django', src: DEVICON + 'django/django-plain.svg' },
+    numpy:      { label: 'NumPy', src: DEVICON + 'numpy/numpy-original.svg' },
+    pandas:     { label: 'Pandas', src: DEVICON + 'pandas/pandas-original.svg' },
+    django:     { label: 'Django', src: SIMPLE_ICONS + 'django/092E20' },
     flutter:    { label: 'Flutter', src: DEVICON + 'flutter/flutter-original.svg' },
     dart:       { label: 'Dart', src: DEVICON + 'dart/dart-original.svg' },
     bootstrap:  { label: 'Bootstrap', src: DEVICON + 'bootstrap/bootstrap-original.svg' },
@@ -21,7 +23,7 @@
     csharp:     { label: 'C#', src: DEVICON + 'csharp/csharp-original.svg' },
     dotnet:     { label: '.NET', src: DEVICON + 'dot-net/dot-net-original.svg' },
     sqlserver:  { label: 'SQL Server', src: DEVICON + 'microsoftsqlserver/microsoftsqlserver-plain.svg' },
-    ml:         { label: 'Machine Learning', src: DEVICON + 'scikitlearn/scikitlearn-original.svg' },
+    ml:         { label: 'Machine Learning', iconClass: 'fas fa-brain' },
     celery:     { label: 'Celery', src: SIMPLE_ICONS + 'celery/37814A', text: 'Ce' },
     channels:   { label: 'Django Channels', text: 'CH' },
     websocket:  { label: 'WebSocket', text: 'WS' },
@@ -35,6 +37,12 @@
   function createIcon(key, className) {
     const tech = TECH[key];
     if (!tech) return null;
+    if (tech.iconClass) {
+      const icon = document.createElement('i');
+      icon.className = className + ' tech-logo-icon ' + tech.iconClass;
+      icon.setAttribute('aria-hidden', 'true');
+      return icon;
+    }
     if (tech.src) {
       const img = document.createElement('img');
       img.className = className;

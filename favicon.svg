@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-  <defs>
-    <clipPath id="portrait"><circle cx="64" cy="64" r="57"/></clipPath>
-  </defs>
-  <circle cx="64" cy="64" r="62" fill="#0d1b3a"/>
-  <circle cx="64" cy="64" r="59" fill="#3b82f6"/>
-  <image href="images/20250802_180004.webp" x="7" y="7" width="114" height="114" preserveAspectRatio="xMidYMid slice" clip-path="url(#portrait)"/>
-  <circle cx="64" cy="64" r="57" fill="none" stroke="#eaf2ff" stroke-width="2.5"/>
-</svg>

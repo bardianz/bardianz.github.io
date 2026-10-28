@@ -1,32 +1,8 @@
 (() => {
   'use strict';
 
-  /* ---------- Language toggle (EN <-> FA) ----------
-     Every element with data-fa keeps its English HTML in data-en, and
-     swaps between the two on toggle. Choice is remembered in localStorage. */
-  const KEY = 'site-lang';
-  const root = document.documentElement;
-  const langBtn = document.getElementById('langToggle');
-  const langLabel = langBtn.querySelector('.lang-toggle-text');
-  const translatable = document.querySelectorAll('[data-fa]');
-
-  translatable.forEach((el) => { el.dataset.en = el.innerHTML.trim(); });
-
-  const setLang = (lang) => {
-    const fa = lang === 'fa';
-    translatable.forEach((el) => { el.innerHTML = fa ? el.dataset.fa : el.dataset.en; });
-    root.lang = fa ? 'fa' : 'en';
-    root.dir = fa ? 'rtl' : 'ltr';
-    langLabel.textContent = fa ? 'EN' : 'FA';
-    document.dispatchEvent(new CustomEvent('site:languagechange', { detail: { lang } }));
-    try { localStorage.setItem(KEY, lang); } catch (_) { /* storage unavailable */ }
-  };
-
-  let saved = null;
-  try { saved = localStorage.getItem(KEY); } catch (_) { /* storage unavailable */ }
-  if (saved === 'fa') setLang('fa');
-
-  langBtn.addEventListener('click', () => setLang(root.dir === 'rtl' ? 'en' : 'fa'));
+  /* Language switching uses the real / and /fa/ page links.
+     Keep language selection in the URL so each page remains fully translated and indexable. */
 
   /* ---------- Copy contact email ---------- */
   document.querySelectorAll('[data-copy-email]').forEach((button) => {

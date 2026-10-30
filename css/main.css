@@ -530,16 +530,18 @@ a:focus-visible, button:focus-visible {
   padding: 0.7rem 0.85rem;
   border: 1px solid var(--line);
   border-radius: 0.55rem;
-  background: var(--ink);
+  background: var(--card);
   direction: ltr;
   text-align: left;
   overflow-x: auto;
 }
 .project-install code {
+  display: block;
   color: var(--text);
   font-family: var(--font-mono);
   font-size: 0.85rem;
-  white-space: nowrap;
+  line-height: 1.5;
+  white-space: pre;
 }
 
 /* carousel inside a card */

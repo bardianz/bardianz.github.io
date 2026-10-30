@@ -524,6 +524,23 @@ a:focus-visible, button:focus-visible {
 .project-body p { margin: 0; font-size: 0.92rem; color: var(--text-muted); }
 .project-body .project-tag { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-2); }
 .project-link { margin-top: 0.4rem; font-family: var(--font-mono); font-size: 0.85rem; }
+/* Python package installation command */
+.project-install {
+  margin-top: 0.45rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: var(--ink);
+  direction: ltr;
+  text-align: left;
+  overflow-x: auto;
+}
+.project-install code {
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
 
 /* carousel inside a card */
 .project-media .carousel,

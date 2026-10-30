@@ -9,6 +9,7 @@
     pandas:     { label: 'Pandas', src: DEVICON + 'pandas/pandas-original.svg' },
     django:     { label: 'Django', src: SIMPLE_ICONS + 'django/092E20' },
     flutter:    { label: 'Flutter', src: DEVICON + 'flutter/flutter-original.svg' },
+    kotlin:     { label: 'Kotlin', src: DEVICON + 'kotlin/kotlin-original.svg' },
     dart:       { label: 'Dart', src: DEVICON + 'dart/dart-original.svg' },
     bootstrap:  { label: 'Bootstrap', src: DEVICON + 'bootstrap/bootstrap-original.svg' },
     qt:         { label: 'Qt / PyQt', src: DEVICON + 'qt/qt-original.svg' },
